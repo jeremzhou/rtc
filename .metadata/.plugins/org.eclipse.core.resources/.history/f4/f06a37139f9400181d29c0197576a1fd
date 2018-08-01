@@ -1,0 +1,5 @@
+package com.netty.beginner;
+
+public class DiscardServerHandler extends ChannelInboundHandlerAdapter{
+
+}

@@ -1,0 +1,16 @@
+package com.netty.client;
+
+public class Client {
+	
+	private static class SingletonHolder {
+			static final Client instance = new Client();
+	}
+	
+	public static Client getInstance () {
+		return SingletonHolder.instance;
+	}
+	
+	private EventLoopGroup group;
+	private Bootstrap b;
+	private channelFuture cf;
+}

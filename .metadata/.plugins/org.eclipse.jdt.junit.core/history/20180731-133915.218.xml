@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="uapollo5" tests="380" started="380" failures="0" errors="6" ignored="0">
+  <testsuite name="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.001">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="createNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="getAllNodeHistories" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="getNonExistingNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="updateNonExistingNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="updateNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.001"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="createNodeHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="getNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+    <testcase name="deleteNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.0">
+    <testcase name="changeLogs" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.0"/>
+    <testcase name="getAllLogs" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.0"/>
+    <testcase name="testLogstashAppender" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="1.961">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.0"/>
+    <testcase name="getPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.148"/>
+    <testcase name="createPrivateConfigWithExistingId" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.125"/>
+    <testcase name="getNonExistingPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.302"/>
+    <testcase name="getAllPrivateConfigs" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.131"/>
+    <testcase name="deletePrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.103"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.114"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.121"/>
+    <testcase name="updatePrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.167"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.133"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.117"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.101"/>
+    <testcase name="updateNonExistingPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.149"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.116"/>
+    <testcase name="createPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.134"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="2.036">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.105"/>
+    <testcase name="getAllProjectHistories" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.187"/>
+    <testcase name="getNonExistingProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.12"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.124"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.129"/>
+    <testcase name="checkUserIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.13"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.174"/>
+    <testcase name="updateProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.142"/>
+    <testcase name="createProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.119"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.121"/>
+    <testcase name="deleteProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.106"/>
+    <testcase name="createProjectHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.116"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.095"/>
+    <testcase name="updateNonExistingProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.124"/>
+    <testcase name="getProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.107"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.137"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.service.UserServiceIntTest" time="0.2">
+    <testcase name="assertThatAnonymousUserIsNotGet" classname="com.utstar.uapollo.service.UserServiceIntTest" time="0.2"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.302">
+    <testcase name="testFindByPrincipal" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.056"/>
+    <testcase name="testAddEventWithWebAuthenticationDetails" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.017"/>
+    <testcase name="testAddEventWithNullData" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.034"/>
+    <testcase name="addAuditEventTruncateLargeData" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.017"/>
+    <testcase name="addAuditEventWithAuthorizationFailureType" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.018"/>
+    <testcase name="findByPrincipalAndType" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.041"/>
+    <testcase name="addAuditEventWithAnonymousUser" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.015"/>
+    <testcase name="testFindAfter" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.029"/>
+    <testcase name="testFindByPrincipalIsNullAndAfterIsNull" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.027"/>
+    <testcase name="testFindByPrincipalNotNullAndAfterIsNull" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.03"/>
+    <testcase name="addAuditEvent" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.018"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.025">
+    <testcase name="testIsCurrentUserInRole" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.002"/>
+    <testcase name="testIsAuthenticated" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.001"/>
+    <testcase name="testgetCurrentUserLogin" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.002"/>
+    <testcase name="testAnonymousIsNotAuthenticated" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.02"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="2.049">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.118"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.12"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="checkNodeConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="createNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.122"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.099"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.108"/>
+    <testcase name="getAllNodeConfigHistories" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="updateNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.123"/>
+    <testcase name="getNonExistingNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.102"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.108"/>
+    <testcase name="createNodeConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.108"/>
+    <testcase name="getNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.112"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.095"/>
+    <testcase name="deleteNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.102"/>
+    <testcase name="updateNonExistingNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.18"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.109"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.125"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="1.434">
+    <testcase name="createApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.125"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.097"/>
+    <testcase name="getNonExistingApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.113"/>
+    <testcase name="createApplicationWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.102"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.106"/>
+    <testcase name="updateNonExistingApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.102"/>
+    <testcase name="updateApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.145"/>
+    <testcase name="getAllApplications" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.135"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.104"/>
+    <testcase name="getApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.1"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.111"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.097"/>
+    <testcase name="deleteApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.096"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.config.WebConfigurerTest" time="0.377">
+    <testcase name="testCorsFilterOnOtherPath" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.182"/>
+    <testcase name="testCorsFilterDeactivated" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.024"/>
+    <testcase name="testStartUpProdServletContext" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.073"/>
+    <testcase name="testUndertowHttp2Enabled" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.017"/>
+    <testcase name="testCustomizeServletContainerNotProd" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.007"/>
+    <testcase name="testCorsFilterOnApiPath" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.023"/>
+    <testcase name="testStartUpDevServletContext" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.003"/>
+    <testcase name="testCorsFilterDeactivated2" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.024"/>
+    <testcase name="testCustomizeServletContainer" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.024"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="2.082">
+    <testcase name="updatePrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.211"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.107"/>
+    <testcase name="deletePrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.165"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.171"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.102"/>
+    <testcase name="getPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.126"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.105"/>
+    <testcase name="updateNonExistingPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.122"/>
+    <testcase name="getNonExistingPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.099"/>
+    <testcase name="checkPrivateConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.115"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.109"/>
+    <testcase name="getAllPrivateConfigHistories" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.101"/>
+    <testcase name="createPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.105"/>
+    <testcase name="createPrivateConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.132"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="1.781">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.092"/>
+    <testcase name="updateNonExistingServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.138"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.116"/>
+    <testcase name="createServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.151"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.11"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.094"/>
+    <testcase name="createServerHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.103"/>
+    <testcase name="checkServerIdIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.111"/>
+    <testcase name="getAllServerHistories" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.103"/>
+    <testcase name="getServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.1"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.105"/>
+    <testcase name="getNonExistingServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.099"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.104"/>
+    <testcase name="deleteServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.112"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.108"/>
+    <testcase name="updateServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.134"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.212">
+    <testcase name="getNonExistingAudit" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.035"/>
+    <testcase name="getNonExistingAuditsByDate" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.059"/>
+    <testcase name="getAllAudits" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.043"/>
+    <testcase name="getAuditsByDate" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.046"/>
+    <testcase name="getAudit" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.03"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.custom.util.UapolloUtilTest" time="0.019">
+    <testcase name="testGetUnixTime" classname="com.utstar.uapollo.custom.util.UapolloUtilTest" time="0.019"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="1.886">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.095"/>
+    <testcase name="checkGlobalConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.117"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.112"/>
+    <testcase name="createGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.133"/>
+    <testcase name="updateGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.125"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.105"/>
+    <testcase name="getGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.093"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="createGlobalConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.109"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.107"/>
+    <testcase name="updateNonExistingGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.117"/>
+    <testcase name="getAllGlobalConfigHistories" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.128"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.095"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.104"/>
+    <testcase name="deleteGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.121"/>
+    <testcase name="getNonExistingGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.113"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.UserResourceIntTest" time="1.208">
+    <testcase name="getAllAuthorities" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.103"/>
+    <testcase name="createUserWithExistingId" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.144"/>
+    <testcase name="testUserDTOtoUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.095"/>
+    <testcase name="testUserEquals" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.1"/>
+    <testcase name="getNonExistingUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.139"/>
+    <testcase name="testUserFromId" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.068"/>
+    <testcase name="testAuthorityEquals" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.095"/>
+    <testcase name="createUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.319"/>
+    <testcase name="testUserToUserDTO" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.145"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="1.822">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.187"/>
+    <testcase name="updateProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.151"/>
+    <testcase name="getAllProjects" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.107"/>
+    <testcase name="updateNonExistingProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.115"/>
+    <testcase name="createProjectWithExistingId" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.12"/>
+    <testcase name="deleteProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.112"/>
+    <testcase name="checkUserIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.119"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.101"/>
+    <testcase name="getProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.105"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.117"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.106"/>
+    <testcase name="getNonExistingProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.098"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.14"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.111"/>
+    <testcase name="createProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.131"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="1.741">
+    <testcase name="checkApplicationConfigidIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.154"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.09"/>
+    <testcase name="getApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="deleteApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.102"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.104"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.091"/>
+    <testcase name="createApplicationConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.117"/>
+    <testcase name="updateApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.132"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.104"/>
+    <testcase name="getAllApplicationConfigHistories" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.12"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.096"/>
+    <testcase name="createApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.114"/>
+    <testcase name="updateNonExistingApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.101"/>
+    <testcase name="getNonExistingApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.102"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.102"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.util.PaginationUtilUnitTest" time="0.007">
+    <testcase name="generatePaginationHttpHeadersTest" classname="com.utstar.uapollo.web.rest.util.PaginationUtilUnitTest" time="0.007"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="1.181">
+    <testcase name="testMissingServletRequestPartException" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.096"/>
+    <testcase name="testMissingServletRequestParameterException" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.109"/>
+    <testcase name="testAccessDenied" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.097"/>
+    <testcase name="testParameterizedError" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.108"/>
+    <testcase name="testInternalServerError" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.102"/>
+    <testcase name="testMethodNotSupported" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.113"/>
+    <testcase name="testExceptionWithResponseStatus" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.096"/>
+    <testcase name="testMethodArgumentNotValid" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.107"/>
+    <testcase name="testParameterizedError2" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.104"/>
+    <testcase name="testUnauthorized" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.09"/>
+    <testcase name="testConcurrencyFailure" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.158"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="2.138">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.103"/>
+    <testcase name="getApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.104"/>
+    <testcase name="deleteApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.32"/>
+    <testcase name="createApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.114"/>
+    <testcase name="createApplicationMetaWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.121"/>
+    <testcase name="getNonExistingApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.099"/>
+    <testcase name="checkConfigFileIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.137"/>
+    <testcase name="updateApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.215"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.101"/>
+    <testcase name="getAllApplicationMetas" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.121"/>
+    <testcase name="updateNonExistingApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.106"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.123"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.115"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.092"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.114"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.153"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="1.838">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.097"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.135"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.152"/>
+    <testcase name="updateApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.213"/>
+    <testcase name="createApplicationHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.101"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.094"/>
+    <testcase name="checkServerIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.102"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.102"/>
+    <testcase name="updateNonExistingApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.107"/>
+    <testcase name="createApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.101"/>
+    <testcase name="getAllApplicationHistories" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.097"/>
+    <testcase name="deleteApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.102"/>
+    <testcase name="getNonExistingApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.095"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.092"/>
+    <testcase name="getApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.1"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.146"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="1.296">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.092"/>
+    <testcase name="createApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.1"/>
+    <testcase name="updateApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.144"/>
+    <testcase name="getNonExistingApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.102"/>
+    <testcase name="createApplicationConfigWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.104"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.094"/>
+    <testcase name="getAllApplicationConfigs" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.101"/>
+    <testcase name="getApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.099"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.105"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.104"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.096"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.154"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="1.973">
+    <testcase name="createClientHeartbeatInfoWithExistingId" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.11"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.092"/>
+    <testcase name="getAllClientHeartbeatInfos" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.109"/>
+    <testcase name="getClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.103"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.111"/>
+    <testcase name="checkApplicationMetaNameIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.108"/>
+    <testcase name="updateNonExistingClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.157"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.137"/>
+    <testcase name="checkHeartbeatVersionIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.107"/>
+    <testcase name="checkHeartbeatTimeIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.111"/>
+    <testcase name="checkUpdateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.142"/>
+    <testcase name="deleteClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.137"/>
+    <testcase name="getNonExistingClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.112"/>
+    <testcase name="createClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.113"/>
+    <testcase name="updateClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.114"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.092"/>
+    <testcase name="checkUpdateVersionIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.117"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="1.467">
+    <testcase name="updateGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.109"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.096"/>
+    <testcase name="updateNonExistingGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.128"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.125"/>
+    <testcase name="getNonExistingGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.1"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.103"/>
+    <testcase name="createGlobalConfigWithExistingId" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.115"/>
+    <testcase name="getGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.104"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.111"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.105"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.113"/>
+    <testcase name="getAllGlobalConfigs" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.099"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.159"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="3.765">
+    <testcase name="testRegisterInvalidEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.281"/>
+    <testcase name="testRegisterInvalidLogin" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.252"/>
+    <testcase name="testRegisterInvalidPassword" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.238"/>
+    <testcase name="testRegisterNullPassword" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.233"/>
+    <testcase name="testRegisterAdminIsIgnored" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.321"/>
+    <testcase name="testActivateAccountWithWrongKey" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.201"/>
+    <testcase name="testGetUnknownAccount" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.192"/>
+    <testcase name="testRegisterDuplicateEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.34"/>
+    <testcase name="testRegisterDuplicateLogin" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.367"/>
+    <testcase name="testAuthenticatedUser" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.187"/>
+    <testcase name="testRequestPasswordResetWrongEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.186"/>
+    <testcase name="testRegisterValid" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.364"/>
+    <testcase name="testNonAuthenticatedUser" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.179"/>
+    <testcase name="testGetExistingAccount" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.181"/>
+    <testcase name="testFinishPasswordResetWrongKey" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.243"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.service.MailServiceIntTest" time="0.191">
+    <testcase name="testSendPasswordResetMail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.04"/>
+    <testcase name="testCreationEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.014"/>
+    <testcase name="testSendEmailWithException" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.016"/>
+    <testcase name="testSendHtmlEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.01"/>
+    <testcase name="testSendMultipartHtmlEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.039"/>
+    <testcase name="testSendEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.01"/>
+    <testcase name="testSendMultipartEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.01"/>
+    <testcase name="testSendActivationEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.022"/>
+    <testcase name="testSendEmailFromTemplate" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.029"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="1.308">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.128"/>
+    <testcase name="getAllNodes" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.104"/>
+    <testcase name="updateNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.097"/>
+    <testcase name="createNodeWithExistingId" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.102"/>
+    <testcase name="getNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.096"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.092"/>
+    <testcase name="getNonExistingNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.097"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.103"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.114"/>
+    <testcase name="createNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.107"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.129"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.139"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.196">
+    <testcase name="assertThatEmailIsPrioritizedOverLogin" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.038">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:59)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x93\x92\x93\xE2\x8E...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="assertThatUserNotActivatedExceptionIsThrownForNotActivatedUsers" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.013">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:59)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\xA1\xB2\x9D\xEC\x96...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="assertThatUserCanBeFoundByLoginIgnoreCase" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.018">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:69)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF1\xAF\x91\x99\xE1\x85...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="assertThatUserCanBeFoundByEmailIgnoreCase" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.095">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:59)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\xB4\x80\x87\xE5\x81...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="assertThatUserCanBeFoundByEmail" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.013">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:59)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\xAB\xBD\x92\xE2\xA0...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="assertThatUserCanBeFoundByLogin" classname="com.utstar.uapollo.security.DomainUserDetailsServiceIntTest" time="0.013">
+      <error>org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:503)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:209)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy155.save(Unknown Source)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)&#13;
+	at com.sun.proxy.$Proxy158.save(Unknown Source)&#13;
+	at com.utstar.uapollo.security.DomainUserDetailsServiceIntTest.init(DomainUserDetailsServiceIntTest.java:59)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)&#13;
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2919)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3490)&#13;
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)&#13;
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:626)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:280)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:261)&#13;
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:306)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:318)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:275)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:182)&#13;
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:113)&#13;
+	at org.hibernate.jpa.event.internal.core.JpaPersistEventListener.saveWithGeneratedId(JpaPersistEventListener.java:67)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:189)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:132)&#13;
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)&#13;
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:782)&#13;
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:767)&#13;
+	at sun.reflect.GeneratedMethodAccessor383.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)&#13;
+	at com.sun.proxy.$Proxy151.persist(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:508)&#13;
+	at sun.reflect.GeneratedMethodAccessor387.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)&#13;
+	... 50 more&#13;
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\xAC\x85\xB9\xEE\x81...' for column 'password_hash' at row 1&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1283)&#13;
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:783)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)&#13;
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)&#13;
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="2.038">
+    <testcase name="deleteApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.135"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.091"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.118"/>
+    <testcase name="getApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.108"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.106"/>
+    <testcase name="updateApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.116"/>
+    <testcase name="checkConfigFileIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.128"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.121"/>
+    <testcase name="updateNonExistingApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.11"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.093"/>
+    <testcase name="getNonExistingApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.095"/>
+    <testcase name="getAllApplicationMetaHistories" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.121"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.106"/>
+    <testcase name="createApplicationMetaHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.125"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.096"/>
+    <testcase name="createApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.11"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.113"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.146"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.078">
+    <testcase name="getProfileInfoWithoutActiveProfiles" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.019"/>
+    <testcase name="getProfileInfoWithoutRibbon" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.019"/>
+    <testcase name="getProfileInfoWithRibbon" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.04"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="1.557">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.09"/>
+    <testcase name="createNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.114"/>
+    <testcase name="deleteNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.095"/>
+    <testcase name="updateNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.107"/>
+    <testcase name="getNonExistingNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.101"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.106"/>
+    <testcase name="createNodeConfigWithExistingId" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.101"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.109"/>
+    <testcase name="getNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.103"/>
+    <testcase name="updateNonExistingNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.095"/>
+    <testcase name="getAllNodeConfigs" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.098"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.109"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.11"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.099"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.12"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="1.422">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.096"/>
+    <testcase name="getAllServers" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.105"/>
+    <testcase name="updateServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.114"/>
+    <testcase name="deleteServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.097"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.109"/>
+    <testcase name="updateNonExistingServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.096"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.093"/>
+    <testcase name="createServerWithExistingId" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.101"/>
+    <testcase name="getNonExistingServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.096"/>
+    <testcase name="getServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.114"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.102"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.11"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.094"/>
+    <testcase name="createServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.095"/>
+  </testsuite>
+</testrun>

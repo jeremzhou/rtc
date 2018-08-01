@@ -1,0 +1,102 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.Node;
+import com.utstar.uapollo.domain.Project;
+import com.utstar.uapollo.service.dto.NodeDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class NodeMapperImpl implements NodeMapper {
+
+    @Autowired
+    private ProjectMapper projectMapper;
+
+    @Override
+    public List<Node> toEntity(List<NodeDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<Node> list = new ArrayList<Node>( dtoList.size() );
+        for ( NodeDTO nodeDTO : dtoList ) {
+            list.add( toEntity( nodeDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<NodeDTO> toDto(List<Node> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<NodeDTO> list = new ArrayList<NodeDTO>( entityList.size() );
+        for ( Node node : entityList ) {
+            list.add( toDto( node ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public NodeDTO toDto(Node node) {
+        if ( node == null ) {
+            return null;
+        }
+
+        NodeDTO nodeDTO = new NodeDTO();
+
+        Long id = nodeProjectId( node );
+        if ( id != null ) {
+            nodeDTO.setProjectId( id );
+        }
+        nodeDTO.setId( node.getId() );
+        nodeDTO.setName( node.getName() );
+        nodeDTO.setCreateTime( node.getCreateTime() );
+        nodeDTO.setModifyTime( node.getModifyTime() );
+
+        return nodeDTO;
+    }
+
+    @Override
+    public Node toEntity(NodeDTO nodeDTO) {
+        if ( nodeDTO == null ) {
+            return null;
+        }
+
+        Node node = new Node();
+
+        node.setProject( projectMapper.fromId( nodeDTO.getProjectId() ) );
+        node.setId( nodeDTO.getId() );
+        node.setName( nodeDTO.getName() );
+        node.setCreateTime( nodeDTO.getCreateTime() );
+        node.setModifyTime( nodeDTO.getModifyTime() );
+
+        return node;
+    }
+
+    private Long nodeProjectId(Node node) {
+        if ( node == null ) {
+            return null;
+        }
+        Project project = node.getProject();
+        if ( project == null ) {
+            return null;
+        }
+        Long id = project.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

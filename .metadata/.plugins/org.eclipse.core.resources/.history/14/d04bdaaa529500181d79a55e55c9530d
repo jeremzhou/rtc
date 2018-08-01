@@ -1,0 +1,13 @@
+package com.netty.client;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
+
+import io.netty.channel.ChannelHandlerAdapter;
+
+public class ClienHeartBeattHandler extends ChannelHandlerAdapter{
+
+	private ScheduledExecutorService schedule = Executors.newScheduledThreadPool(1);
+	
+}

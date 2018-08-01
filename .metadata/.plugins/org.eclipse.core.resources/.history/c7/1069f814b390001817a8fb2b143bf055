@@ -1,0 +1,127 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationMeta;
+import com.utstar.uapollo.domain.Node;
+import com.utstar.uapollo.domain.NodeConfig;
+import com.utstar.uapollo.service.dto.NodeConfigDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class NodeConfigMapperImpl implements NodeConfigMapper {
+
+    @Autowired
+    private ApplicationMetaMapper applicationMetaMapper;
+    @Autowired
+    private NodeMapper nodeMapper;
+
+    @Override
+    public List<NodeConfig> toEntity(List<NodeConfigDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<NodeConfig> list = new ArrayList<NodeConfig>( dtoList.size() );
+        for ( NodeConfigDTO nodeConfigDTO : dtoList ) {
+            list.add( toEntity( nodeConfigDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<NodeConfigDTO> toDto(List<NodeConfig> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<NodeConfigDTO> list = new ArrayList<NodeConfigDTO>( entityList.size() );
+        for ( NodeConfig nodeConfig : entityList ) {
+            list.add( toDto( nodeConfig ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public NodeConfigDTO toDto(NodeConfig nodeConfig) {
+        if ( nodeConfig == null ) {
+            return null;
+        }
+
+        NodeConfigDTO nodeConfigDTO = new NodeConfigDTO();
+
+        Long id = nodeConfigApplicationMetaId( nodeConfig );
+        if ( id != null ) {
+            nodeConfigDTO.setApplicationMetaId( id );
+        }
+        Long id1 = nodeConfigNodeId( nodeConfig );
+        if ( id1 != null ) {
+            nodeConfigDTO.setNodeId( id1 );
+        }
+        nodeConfigDTO.setId( nodeConfig.getId() );
+        nodeConfigDTO.setKey( nodeConfig.getKey() );
+        nodeConfigDTO.setValue( nodeConfig.getValue() );
+        nodeConfigDTO.setCreateTime( nodeConfig.getCreateTime() );
+        nodeConfigDTO.setModifyTime( nodeConfig.getModifyTime() );
+
+        return nodeConfigDTO;
+    }
+
+    @Override
+    public NodeConfig toEntity(NodeConfigDTO nodeConfigDTO) {
+        if ( nodeConfigDTO == null ) {
+            return null;
+        }
+
+        NodeConfig nodeConfig = new NodeConfig();
+
+        nodeConfig.setApplicationMeta( applicationMetaMapper.fromId( nodeConfigDTO.getApplicationMetaId() ) );
+        nodeConfig.setNode( nodeMapper.fromId( nodeConfigDTO.getNodeId() ) );
+        nodeConfig.setId( nodeConfigDTO.getId() );
+        nodeConfig.setKey( nodeConfigDTO.getKey() );
+        nodeConfig.setValue( nodeConfigDTO.getValue() );
+        nodeConfig.setCreateTime( nodeConfigDTO.getCreateTime() );
+        nodeConfig.setModifyTime( nodeConfigDTO.getModifyTime() );
+
+        return nodeConfig;
+    }
+
+    private Long nodeConfigApplicationMetaId(NodeConfig nodeConfig) {
+        if ( nodeConfig == null ) {
+            return null;
+        }
+        ApplicationMeta applicationMeta = nodeConfig.getApplicationMeta();
+        if ( applicationMeta == null ) {
+            return null;
+        }
+        Long id = applicationMeta.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+
+    private Long nodeConfigNodeId(NodeConfig nodeConfig) {
+        if ( nodeConfig == null ) {
+            return null;
+        }
+        Node node = nodeConfig.getNode();
+        if ( node == null ) {
+            return null;
+        }
+        Long id = node.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

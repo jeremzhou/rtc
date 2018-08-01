@@ -1,0 +1,81 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ProjectHistory;
+import com.utstar.uapollo.service.dto.ProjectHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ProjectHistoryMapperImpl implements ProjectHistoryMapper {
+
+    @Override
+    public ProjectHistory toEntity(ProjectHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ProjectHistory projectHistory = new ProjectHistory();
+
+        projectHistory.setId( dto.getId() );
+        projectHistory.setProjectId( dto.getProjectId() );
+        projectHistory.setName( dto.getName() );
+        projectHistory.setUserId( dto.getUserId() );
+        projectHistory.setOperation( dto.getOperation() );
+        projectHistory.setCreateTime( dto.getCreateTime() );
+
+        return projectHistory;
+    }
+
+    @Override
+    public ProjectHistoryDTO toDto(ProjectHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ProjectHistoryDTO projectHistoryDTO = new ProjectHistoryDTO();
+
+        projectHistoryDTO.setId( entity.getId() );
+        projectHistoryDTO.setProjectId( entity.getProjectId() );
+        projectHistoryDTO.setName( entity.getName() );
+        projectHistoryDTO.setUserId( entity.getUserId() );
+        projectHistoryDTO.setOperation( entity.getOperation() );
+        projectHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return projectHistoryDTO;
+    }
+
+    @Override
+    public List<ProjectHistory> toEntity(List<ProjectHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ProjectHistory> list = new ArrayList<ProjectHistory>( dtoList.size() );
+        for ( ProjectHistoryDTO projectHistoryDTO : dtoList ) {
+            list.add( toEntity( projectHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ProjectHistoryDTO> toDto(List<ProjectHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ProjectHistoryDTO> list = new ArrayList<ProjectHistoryDTO>( entityList.size() );
+        for ( ProjectHistory projectHistory : entityList ) {
+            list.add( toDto( projectHistory ) );
+        }
+
+        return list;
+    }
+}

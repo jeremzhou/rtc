@@ -1,0 +1,102 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.Application;
+import com.utstar.uapollo.domain.ApplicationConfig;
+import com.utstar.uapollo.service.dto.ApplicationConfigDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationConfigMapperImpl implements ApplicationConfigMapper {
+
+    @Autowired
+    private ApplicationMapper applicationMapper;
+
+    @Override
+    public List<ApplicationConfig> toEntity(List<ApplicationConfigDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ApplicationConfig> list = new ArrayList<ApplicationConfig>( dtoList.size() );
+        for ( ApplicationConfigDTO applicationConfigDTO : dtoList ) {
+            list.add( toEntity( applicationConfigDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationConfigDTO> toDto(List<ApplicationConfig> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationConfigDTO> list = new ArrayList<ApplicationConfigDTO>( entityList.size() );
+        for ( ApplicationConfig applicationConfig : entityList ) {
+            list.add( toDto( applicationConfig ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public ApplicationConfigDTO toDto(ApplicationConfig applicationConfig) {
+        if ( applicationConfig == null ) {
+            return null;
+        }
+
+        ApplicationConfigDTO applicationConfigDTO = new ApplicationConfigDTO();
+
+        Long id = applicationConfigApplicationId( applicationConfig );
+        if ( id != null ) {
+            applicationConfigDTO.setApplicationId( id );
+        }
+        applicationConfigDTO.setId( applicationConfig.getId() );
+        applicationConfigDTO.setConfigContent( applicationConfig.getConfigContent() );
+        applicationConfigDTO.setCreateTime( applicationConfig.getCreateTime() );
+        applicationConfigDTO.setModifyTime( applicationConfig.getModifyTime() );
+
+        return applicationConfigDTO;
+    }
+
+    @Override
+    public ApplicationConfig toEntity(ApplicationConfigDTO applicationConfigDTO) {
+        if ( applicationConfigDTO == null ) {
+            return null;
+        }
+
+        ApplicationConfig applicationConfig = new ApplicationConfig();
+
+        applicationConfig.setApplication( applicationMapper.fromId( applicationConfigDTO.getApplicationId() ) );
+        applicationConfig.setId( applicationConfigDTO.getId() );
+        applicationConfig.setConfigContent( applicationConfigDTO.getConfigContent() );
+        applicationConfig.setCreateTime( applicationConfigDTO.getCreateTime() );
+        applicationConfig.setModifyTime( applicationConfigDTO.getModifyTime() );
+
+        return applicationConfig;
+    }
+
+    private Long applicationConfigApplicationId(ApplicationConfig applicationConfig) {
+        if ( applicationConfig == null ) {
+            return null;
+        }
+        Application application = applicationConfig.getApplication();
+        if ( application == null ) {
+            return null;
+        }
+        Long id = application.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

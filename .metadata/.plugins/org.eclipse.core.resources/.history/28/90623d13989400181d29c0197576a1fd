@@ -1,0 +1,20 @@
+package com.utstat.test;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+public class BlockingQueueTest {
+	
+	public static class Basket {
+		BlockingQueue<String> basker = new ArrayBlockingQueue<String>(3);
+		
+		public void produce() throws InterruptedException {
+			basker.put("An apple");
+		}
+		
+		public String consume() throws InterruptedException {
+			String apple =basker.take();
+			return apple;
+		}
+	}
+}

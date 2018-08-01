@@ -1,0 +1,18 @@
+package com.netty.server;
+
+import io.netty.channel.ChannelHandlerAdapter;
+import io.netty.channel.ChannelHandlerContext;
+
+public class ServerHandler extends ChannelHandlerAdapter{
+
+	@SuppressWarnings("unused")
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public  void channelRead() {
+		// TODO Auto-generated method stub
+
+	}
+}

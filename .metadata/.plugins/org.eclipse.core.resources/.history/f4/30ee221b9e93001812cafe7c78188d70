@@ -1,0 +1,7 @@
+package com.utstar.uapollo;
+
+public class Student {
+	private String a;
+	private String b;
+	
+}

@@ -1,0 +1,83 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ClientHeartbeatInfo;
+import com.utstar.uapollo.service.dto.ClientHeartbeatInfoDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ClientHeartbeatInfoMapperImpl implements ClientHeartbeatInfoMapper {
+
+    @Override
+    public ClientHeartbeatInfo toEntity(ClientHeartbeatInfoDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ClientHeartbeatInfo clientHeartbeatInfo = new ClientHeartbeatInfo();
+
+        clientHeartbeatInfo.setId( dto.getId() );
+        clientHeartbeatInfo.setIp( dto.getIp() );
+        clientHeartbeatInfo.setApplicationMetaName( dto.getApplicationMetaName() );
+        clientHeartbeatInfo.setUpdateTime( dto.getUpdateTime() );
+        clientHeartbeatInfo.setUpdateVersion( dto.getUpdateVersion() );
+        clientHeartbeatInfo.setHeartbeatTime( dto.getHeartbeatTime() );
+        clientHeartbeatInfo.setHeartbeatVersion( dto.getHeartbeatVersion() );
+
+        return clientHeartbeatInfo;
+    }
+
+    @Override
+    public ClientHeartbeatInfoDTO toDto(ClientHeartbeatInfo entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ClientHeartbeatInfoDTO clientHeartbeatInfoDTO = new ClientHeartbeatInfoDTO();
+
+        clientHeartbeatInfoDTO.setId( entity.getId() );
+        clientHeartbeatInfoDTO.setIp( entity.getIp() );
+        clientHeartbeatInfoDTO.setApplicationMetaName( entity.getApplicationMetaName() );
+        clientHeartbeatInfoDTO.setUpdateTime( entity.getUpdateTime() );
+        clientHeartbeatInfoDTO.setUpdateVersion( entity.getUpdateVersion() );
+        clientHeartbeatInfoDTO.setHeartbeatTime( entity.getHeartbeatTime() );
+        clientHeartbeatInfoDTO.setHeartbeatVersion( entity.getHeartbeatVersion() );
+
+        return clientHeartbeatInfoDTO;
+    }
+
+    @Override
+    public List<ClientHeartbeatInfo> toEntity(List<ClientHeartbeatInfoDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ClientHeartbeatInfo> list = new ArrayList<ClientHeartbeatInfo>( dtoList.size() );
+        for ( ClientHeartbeatInfoDTO clientHeartbeatInfoDTO : dtoList ) {
+            list.add( toEntity( clientHeartbeatInfoDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ClientHeartbeatInfoDTO> toDto(List<ClientHeartbeatInfo> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ClientHeartbeatInfoDTO> list = new ArrayList<ClientHeartbeatInfoDTO>( entityList.size() );
+        for ( ClientHeartbeatInfo clientHeartbeatInfo : entityList ) {
+            list.add( toDto( clientHeartbeatInfo ) );
+        }
+
+        return list;
+    }
+}

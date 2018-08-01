@@ -1,0 +1,33 @@
+spring:
+  application:
+    version: 1.0.0
+  datasource:
+      url: jdbc:mysql://172.19.64.100:3306/uapollo?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: rss123
+  jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        database: MYSQL
+        show-sql: true
+        
+      
+
+server:
+  address: 0.0.0.0 # Network address to which the server should bind to.  
+  port: 8080 # Server HTTP port.
+  
+uapollo:
+  application:
+    meta:
+      reload:
+        try-lock-time: 3 # seconds
+        task:
+          cron-expression: 6 6 6 * * ? # 定时检查频率
+    release:
+      thread-nums: 2 # rlease配置线程数量
+  task:
+    scheduler:
+      pool-size: 10 # ThreadPoolTaskScheduler pool size 
+  template:
+    configuration:    
+      location: ${spring.property.path}/template/configuration # 应用默认配置文件模板存储位置

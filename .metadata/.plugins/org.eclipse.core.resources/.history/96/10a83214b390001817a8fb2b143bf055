@@ -1,0 +1,81 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ServerHistory;
+import com.utstar.uapollo.service.dto.ServerHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ServerHistoryMapperImpl implements ServerHistoryMapper {
+
+    @Override
+    public ServerHistory toEntity(ServerHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ServerHistory serverHistory = new ServerHistory();
+
+        serverHistory.setId( dto.getId() );
+        serverHistory.setNodeId( dto.getNodeId() );
+        serverHistory.setServerId( dto.getServerId() );
+        serverHistory.setIp( dto.getIp() );
+        serverHistory.setOperation( dto.getOperation() );
+        serverHistory.setCreateTime( dto.getCreateTime() );
+
+        return serverHistory;
+    }
+
+    @Override
+    public ServerHistoryDTO toDto(ServerHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ServerHistoryDTO serverHistoryDTO = new ServerHistoryDTO();
+
+        serverHistoryDTO.setId( entity.getId() );
+        serverHistoryDTO.setNodeId( entity.getNodeId() );
+        serverHistoryDTO.setServerId( entity.getServerId() );
+        serverHistoryDTO.setIp( entity.getIp() );
+        serverHistoryDTO.setOperation( entity.getOperation() );
+        serverHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return serverHistoryDTO;
+    }
+
+    @Override
+    public List<ServerHistory> toEntity(List<ServerHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ServerHistory> list = new ArrayList<ServerHistory>( dtoList.size() );
+        for ( ServerHistoryDTO serverHistoryDTO : dtoList ) {
+            list.add( toEntity( serverHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ServerHistoryDTO> toDto(List<ServerHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ServerHistoryDTO> list = new ArrayList<ServerHistoryDTO>( entityList.size() );
+        for ( ServerHistory serverHistory : entityList ) {
+            list.add( toDto( serverHistory ) );
+        }
+
+        return list;
+    }
+}

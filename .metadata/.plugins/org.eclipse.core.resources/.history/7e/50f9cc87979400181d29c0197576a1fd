@@ -1,0 +1,5 @@
+package com.utstat.test;
+
+public class BlockingQueueTest {
+	
+}

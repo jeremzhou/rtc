@@ -1,0 +1,13 @@
+package com.netty.server;
+
+import io.netty.channel.ChannelHandlerAdapter;
+import io.netty.channel.ChannelHandlerContext;
+
+public class ServerHandler extends ChannelHandlerAdapter{
+
+	@Override 
+	private void channelActive(ChannelHandlerContext ctx) {
+		// TODO Auto-generated method stub
+
+	}
+}

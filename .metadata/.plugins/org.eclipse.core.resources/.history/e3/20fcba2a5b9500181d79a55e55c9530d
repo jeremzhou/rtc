@@ -1,0 +1,40 @@
+package com.netty.util;
+
+import org.jboss.marshalling.MarshallerFactory;
+import org.jboss.marshalling.Marshalling;
+import org.jboss.marshalling.MarshallingConfiguration;
+
+import io.netty.handler.codec.marshalling.DefaultUnmarshallerProvider;
+import io.netty.handler.codec.marshalling.MarshallerProvider;
+import io.netty.handler.codec.marshalling.MarshallingDecoder;
+import io.netty.handler.codec.marshalling.MarshallingEncoder;
+import io.netty.handler.codec.marshalling.UnmarshallerProvider;
+
+public final class MarshallingCodeCFactory {
+
+	public static MarshallingDecoder buildMarshallingDecoder() {
+		
+		final MarshallerFactory marshallerFactory = Marshalling.getProvidedMarshallerFactory("serial");
+		
+		final MarshallingConfiguration configuaration = new MarshallingConfiguration();
+		configuaration.setVersion(5);
+		
+		UnmarshallerProvider provider = new DefaultUnmarshallerProvider(marshallerFactory, configuaration);
+		
+		MarshallingDecoder decoder = new MarshallingDecoder(provider, 1024);
+		return decoder;
+	}
+	
+	public static MarshallingEncoder buildMarshallingEncode() {
+		final MarshallerFactory marshallerFactory = Marshalling.getProvidedMarshallerFactory("serial");
+		
+		final MarshallingConfiguration configuaration = new MarshallingConfiguration();
+		configuaration.setVersion(5);
+		
+		MarshallerProvider provider = new DefaultMarshallerProvider(marshallerFactory, configuration);
+		
+
+		MarshallingEncoder encoder = new MarshallingEncoder((MarshallerProvider) provider);
+		return encoder;
+	}
+}

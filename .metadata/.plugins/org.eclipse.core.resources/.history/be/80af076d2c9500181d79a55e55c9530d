@@ -1,0 +1,9 @@
+package com.netty.server;
+
+public class Server {
+	
+	public static void main(String[] args) {
+		
+		EventLoopGroup pGroup = new EventLoopGroup(); 
+	}
+}

@@ -1,0 +1,7 @@
+package com.netty.echo;
+
+public class EchoServer {
+	
+	private int port;
+	public EchoServer() {}
+}

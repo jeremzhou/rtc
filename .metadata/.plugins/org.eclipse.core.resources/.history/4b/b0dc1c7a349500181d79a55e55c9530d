@@ -1,0 +1,39 @@
+package com.netty.client;
+
+public class UserParam {
+	private int id;
+	private String name;
+	private String requestMessage;
+	
+	public UserParam() {}
+	public UserParam(int id, String name, String requestMessage) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.requestMessage = requestMessage;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getRequestMessage() {
+		return requestMessage;
+	}
+	public void setRequestMessage(String requestMessage) {
+		this.requestMessage = requestMessage;
+	}
+	@Override
+	public String toString() {
+		return "UserParam [id=" + id + ", name=" + name + ", requestMessage=" + requestMessage + "]";
+	}
+	
+	
+}

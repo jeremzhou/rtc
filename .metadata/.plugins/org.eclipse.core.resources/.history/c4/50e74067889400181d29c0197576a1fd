@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.utstarcom.vmsadapter</groupId>
+	<artifactId>md5verify</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<name>md5verify</name>
+	<description>vmsadapter md5 verify</description>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<!-- version properties -->
+		<os-platform>LINUX64</os-platform>
+		<minor-version>001</minor-version>
+		<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+
+		<!-- dependencies versions -->
+		<ojdbc8.version>12.2.0.1</ojdbc8.version>
+		<guava.version>23.4-jre</guava.version>
+		<apollo.version>1.0.0-SNAPSHOT</apollo.version>
+
+		<!-- plugins version -->
+		<maven-clean-plugin-version>3.0.0</maven-clean-plugin-version>
+		<maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
+		<maven-dependency-plugin-version>3.0.1</maven-dependency-plugin-version>
+		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
+		<maven-assembly-plugin-version>2.6</maven-assembly-plugin-version>
+		<exec-maven-plugin-version>1.6.0</exec-maven-plugin-version>
+
+		<!-- exec copy releaseNotes -->
+		<copyReleaseNotes.bat>${basedir}/src/main/assembly/copyReleaseNotes.bat</copyReleaseNotes.bat>
+		<copyReleaseNotes.sh>${basedir}/src/main/assembly/copyReleaseNotes.sh</copyReleaseNotes.sh>
+		<srcReleaseNotes>${basedir}/MD5VERIFY_RELEASENOTES.html</srcReleaseNotes>
+		<dstReleaseNotes>${project.build.directory}/${project.build.finalName}_Internal_ReleaseNotes.html</dstReleaseNotes>
+
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<properties>
+				<copyReleaseNotes>${copyReleaseNotes.bat}</copyReleaseNotes>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>linux</id>
+			<properties>
+				<copyReleaseNotes>${copyReleaseNotes.sh}</copyReleaseNotes>
+			</properties>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-client -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-client</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${ojdbc8.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ut.framework.apollo</groupId>
+			<artifactId>uapollo-client</artifactId>
+			<version>${apollo.version}</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+            <version>1.2.3.RELEASE</version>
+        </dependency>
+
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.7.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}.${os-platform}.MES_${project.version}_${maven.build.timestamp}_${minor-version}</finalName>
+		<plugins>
+			<!-- <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+				</plugin> -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven-clean-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>auto-clean</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${maven-dependency-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${maven-resources-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/classes/com/utstarcom/nettyexample</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/java/com/utstarcom/nettyexample</directory>
+									<includes>
+										<include>*.xml</include>
+										<include>*.yml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven-assembly-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${exec-maven-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>exec-copyReleaseNotes</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${copyReleaseNotes}</executable>
+							<arguments>
+								<argument>${srcReleaseNotes}</argument>
+								<argument>${dstReleaseNotes}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<url>http://10.50.13.130:9527/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-public</id>
+			<url>http://10.50.13.130:9527/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<url>  
+                http://10.50.13.130:9527/repository/maven-releases/
+            </url>
+		</repository>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<url>  
+                http://10.50.13.130:9527/repository/maven-snapshots/ 
+            </url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

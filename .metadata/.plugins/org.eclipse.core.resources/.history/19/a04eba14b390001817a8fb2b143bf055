@@ -1,0 +1,106 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationMeta;
+import com.utstar.uapollo.domain.Project;
+import com.utstar.uapollo.service.dto.ApplicationMetaDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationMetaMapperImpl implements ApplicationMetaMapper {
+
+    @Autowired
+    private ProjectMapper projectMapper;
+
+    @Override
+    public List<ApplicationMeta> toEntity(List<ApplicationMetaDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ApplicationMeta> list = new ArrayList<ApplicationMeta>( dtoList.size() );
+        for ( ApplicationMetaDTO applicationMetaDTO : dtoList ) {
+            list.add( toEntity( applicationMetaDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationMetaDTO> toDto(List<ApplicationMeta> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationMetaDTO> list = new ArrayList<ApplicationMetaDTO>( entityList.size() );
+        for ( ApplicationMeta applicationMeta : entityList ) {
+            list.add( toDto( applicationMeta ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public ApplicationMetaDTO toDto(ApplicationMeta applicationMeta) {
+        if ( applicationMeta == null ) {
+            return null;
+        }
+
+        ApplicationMetaDTO applicationMetaDTO = new ApplicationMetaDTO();
+
+        Long id = applicationMetaProjectId( applicationMeta );
+        if ( id != null ) {
+            applicationMetaDTO.setProjectId( id );
+        }
+        applicationMetaDTO.setId( applicationMeta.getId() );
+        applicationMetaDTO.setName( applicationMeta.getName() );
+        applicationMetaDTO.setConfigFile( applicationMeta.getConfigFile() );
+        applicationMetaDTO.setConfigContent( applicationMeta.getConfigContent() );
+        applicationMetaDTO.setCreateTime( applicationMeta.getCreateTime() );
+        applicationMetaDTO.setModifyTime( applicationMeta.getModifyTime() );
+
+        return applicationMetaDTO;
+    }
+
+    @Override
+    public ApplicationMeta toEntity(ApplicationMetaDTO applicationMetaDTO) {
+        if ( applicationMetaDTO == null ) {
+            return null;
+        }
+
+        ApplicationMeta applicationMeta = new ApplicationMeta();
+
+        applicationMeta.setProject( projectMapper.fromId( applicationMetaDTO.getProjectId() ) );
+        applicationMeta.setId( applicationMetaDTO.getId() );
+        applicationMeta.setName( applicationMetaDTO.getName() );
+        applicationMeta.setConfigFile( applicationMetaDTO.getConfigFile() );
+        applicationMeta.setConfigContent( applicationMetaDTO.getConfigContent() );
+        applicationMeta.setCreateTime( applicationMetaDTO.getCreateTime() );
+        applicationMeta.setModifyTime( applicationMetaDTO.getModifyTime() );
+
+        return applicationMeta;
+    }
+
+    private Long applicationMetaProjectId(ApplicationMeta applicationMeta) {
+        if ( applicationMeta == null ) {
+            return null;
+        }
+        Project project = applicationMeta.getProject();
+        if ( project == null ) {
+            return null;
+        }
+        Long id = project.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

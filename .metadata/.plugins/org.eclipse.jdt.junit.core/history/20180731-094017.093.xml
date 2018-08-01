@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="uapollo5" tests="374" started="374" failures="0" errors="0" ignored="0">
+  <testsuite name="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="3.19">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.002"/>
+    <testcase name="createNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.275"/>
+    <testcase name="getAllNodeHistories" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.311"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.515"/>
+    <testcase name="getNonExistingNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.148"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.225"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.123"/>
+    <testcase name="updateNonExistingNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.13"/>
+    <testcase name="updateNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.182"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.132"/>
+    <testcase name="createNodeHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.141"/>
+    <testcase name="getNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.176"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.127"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.143"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.285"/>
+    <testcase name="deleteNodeHistory" classname="com.utstar.uapollo.web.rest.NodeHistoryResourceIntTest" time="0.275"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.285">
+    <testcase name="changeLogs" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.122"/>
+    <testcase name="getAllLogs" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.046"/>
+    <testcase name="testLogstashAppender" classname="com.utstar.uapollo.web.rest.LogsResourceIntTest" time="0.117"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="2.307">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.111"/>
+    <testcase name="getPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.181"/>
+    <testcase name="createPrivateConfigWithExistingId" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.201"/>
+    <testcase name="getNonExistingPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.108"/>
+    <testcase name="getAllPrivateConfigs" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.112"/>
+    <testcase name="deletePrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.125"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.113"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.121"/>
+    <testcase name="updatePrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.219"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.143"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.126"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.093"/>
+    <testcase name="updateNonExistingPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.248"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.254"/>
+    <testcase name="createPrivateConfig" classname="com.utstar.uapollo.web.rest.PrivateConfigResourceIntTest" time="0.152"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="2.247">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.12"/>
+    <testcase name="getAllProjectHistories" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.126"/>
+    <testcase name="getNonExistingProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.105"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.127"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.194"/>
+    <testcase name="checkUserIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.17"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.098"/>
+    <testcase name="updateProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.14"/>
+    <testcase name="createProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.119"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.146"/>
+    <testcase name="deleteProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.161"/>
+    <testcase name="createProjectHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.172"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.227"/>
+    <testcase name="updateNonExistingProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.108"/>
+    <testcase name="getProjectHistory" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.107"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ProjectHistoryResourceIntTest" time="0.127"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.service.UserServiceIntTest" time="0.178">
+    <testcase name="assertThatAnonymousUserIsNotGet" classname="com.utstar.uapollo.service.UserServiceIntTest" time="0.178"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.513">
+    <testcase name="testFindByPrincipal" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.127"/>
+    <testcase name="testAddEventWithWebAuthenticationDetails" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.019"/>
+    <testcase name="testAddEventWithNullData" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.014"/>
+    <testcase name="addAuditEventTruncateLargeData" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.015"/>
+    <testcase name="addAuditEventWithAuthorizationFailureType" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.012"/>
+    <testcase name="findByPrincipalAndType" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.023"/>
+    <testcase name="addAuditEventWithAnonymousUser" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.013"/>
+    <testcase name="testFindAfter" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.022"/>
+    <testcase name="testFindByPrincipalIsNullAndAfterIsNull" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.021"/>
+    <testcase name="testFindByPrincipalNotNullAndAfterIsNull" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.041"/>
+    <testcase name="addAuditEvent" classname="com.utstar.uapollo.repository.CustomAuditEventRepositoryIntTest" time="0.205"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.062">
+    <testcase name="testIsCurrentUserInRole" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.004"/>
+    <testcase name="testIsAuthenticated" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.001"/>
+    <testcase name="testgetCurrentUserLogin" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.004"/>
+    <testcase name="testAnonymousIsNotAuthenticated" classname="com.utstar.uapollo.security.SecurityUtilsUnitTest" time="0.053"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="2.25">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.19"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.171"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="checkNodeConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.109"/>
+    <testcase name="createNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.114"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.098"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.105"/>
+    <testcase name="getAllNodeConfigHistories" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.148"/>
+    <testcase name="updateNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.166"/>
+    <testcase name="getNonExistingNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.099"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.113"/>
+    <testcase name="createNodeConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.112"/>
+    <testcase name="getNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.095"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.095"/>
+    <testcase name="deleteNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="updateNonExistingNodeConfigHistory" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.136"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.144"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigHistoryResourceIntTest" time="0.145"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="1.938">
+    <testcase name="createApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.178"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.134"/>
+    <testcase name="getNonExistingApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.124"/>
+    <testcase name="createApplicationWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.109"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.097"/>
+    <testcase name="updateNonExistingApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.167"/>
+    <testcase name="updateApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.151"/>
+    <testcase name="getAllApplications" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.392"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.13"/>
+    <testcase name="getApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.106"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.123"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.128"/>
+    <testcase name="deleteApplication" classname="com.utstar.uapollo.web.rest.ApplicationResourceIntTest" time="0.098"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.config.WebConfigurerTest" time="0.34">
+    <testcase name="testCorsFilterOnOtherPath" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.158"/>
+    <testcase name="testCorsFilterDeactivated" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.023"/>
+    <testcase name="testStartUpProdServletContext" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.064"/>
+    <testcase name="testUndertowHttp2Enabled" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.016"/>
+    <testcase name="testCustomizeServletContainerNotProd" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.006"/>
+    <testcase name="testCorsFilterOnApiPath" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.021"/>
+    <testcase name="testStartUpDevServletContext" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.003"/>
+    <testcase name="testCorsFilterDeactivated2" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.021"/>
+    <testcase name="testCustomizeServletContainer" classname="com.utstar.uapollo.config.WebConfigurerTest" time="0.027"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="2.145">
+    <testcase name="updatePrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.19"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.11"/>
+    <testcase name="deletePrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.159"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.089"/>
+    <testcase name="getPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.094"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.123"/>
+    <testcase name="updateNonExistingPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.224"/>
+    <testcase name="getNonExistingPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.121"/>
+    <testcase name="checkPrivateConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.117"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.129"/>
+    <testcase name="getAllPrivateConfigHistories" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.15"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.097"/>
+    <testcase name="createPrivateConfigHistory" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.108"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.099"/>
+    <testcase name="createPrivateConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.116"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.PrivateConfigHistoryResourceIntTest" time="0.116"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="2.798">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.096"/>
+    <testcase name="updateNonExistingServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.192"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.526"/>
+    <testcase name="createServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.115"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.106"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.088"/>
+    <testcase name="createServerHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.102"/>
+    <testcase name="checkServerIdIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.111"/>
+    <testcase name="getAllServerHistories" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.103"/>
+    <testcase name="getServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.144"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.193"/>
+    <testcase name="getNonExistingServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.104"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.098"/>
+    <testcase name="deleteServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.31"/>
+    <testcase name="checkNodeIdIsRequired" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.12"/>
+    <testcase name="updateServerHistory" classname="com.utstar.uapollo.web.rest.ServerHistoryResourceIntTest" time="0.389"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.236">
+    <testcase name="getNonExistingAudit" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.03"/>
+    <testcase name="getNonExistingAuditsByDate" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.118"/>
+    <testcase name="getAllAudits" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.04"/>
+    <testcase name="getAuditsByDate" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.026"/>
+    <testcase name="getAudit" classname="com.utstar.uapollo.web.rest.AuditResourceIntTest" time="0.022"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.custom.util.UapolloUtilTest" time="0.017">
+    <testcase name="testGetUnixTime" classname="com.utstar.uapollo.custom.util.UapolloUtilTest" time="0.017"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="2.095">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.108"/>
+    <testcase name="checkGlobalConfigIdIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.145"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.109"/>
+    <testcase name="createGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.128"/>
+    <testcase name="updateGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.112"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.14"/>
+    <testcase name="getGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.094"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.097"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="createGlobalConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.116"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.149"/>
+    <testcase name="updateNonExistingGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.261"/>
+    <testcase name="getAllGlobalConfigHistories" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.106"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.114"/>
+    <testcase name="deleteGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.098"/>
+    <testcase name="getNonExistingGlobalConfigHistory" classname="com.utstar.uapollo.web.rest.GlobalConfigHistoryResourceIntTest" time="0.108"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.UserResourceIntTest" time="1.608">
+    <testcase name="getAllAuthorities" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.106"/>
+    <testcase name="createUserWithExistingId" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.25"/>
+    <testcase name="testUserDTOtoUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.294"/>
+    <testcase name="testUserEquals" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.134"/>
+    <testcase name="getNonExistingUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.13"/>
+    <testcase name="testUserFromId" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.08"/>
+    <testcase name="testAuthorityEquals" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.089"/>
+    <testcase name="createUser" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.359"/>
+    <testcase name="testUserToUserDTO" classname="com.utstar.uapollo.web.rest.UserResourceIntTest" time="0.164"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="2.042">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.151"/>
+    <testcase name="updateProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.26"/>
+    <testcase name="getAllProjects" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.143"/>
+    <testcase name="updateNonExistingProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.145"/>
+    <testcase name="createProjectWithExistingId" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.116"/>
+    <testcase name="deleteProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.154"/>
+    <testcase name="checkUserIdIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.106"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.102"/>
+    <testcase name="getProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.098"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.134"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.127"/>
+    <testcase name="getNonExistingProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.099"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.119"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.122"/>
+    <testcase name="createProject" classname="com.utstar.uapollo.web.rest.ProjectResourceIntTest" time="0.166"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="2.005">
+    <testcase name="checkApplicationConfigidIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.187"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.099"/>
+    <testcase name="getApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.132"/>
+    <testcase name="deleteApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.133"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.1"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.094"/>
+    <testcase name="createApplicationConfigHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.112"/>
+    <testcase name="updateApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.162"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.103"/>
+    <testcase name="getAllApplicationConfigHistories" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.11"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.101"/>
+    <testcase name="createApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.14"/>
+    <testcase name="updateNonExistingApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.121"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.136"/>
+    <testcase name="getNonExistingApplicationConfigHistory" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.135"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigHistoryResourceIntTest" time="0.14"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.util.PaginationUtilUnitTest" time="0.004">
+    <testcase name="generatePaginationHttpHeadersTest" classname="com.utstar.uapollo.web.rest.util.PaginationUtilUnitTest" time="0.004"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="1.302">
+    <testcase name="testMissingServletRequestPartException" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.109"/>
+    <testcase name="testMissingServletRequestParameterException" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.098"/>
+    <testcase name="testAccessDenied" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.105"/>
+    <testcase name="testParameterizedError" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.119"/>
+    <testcase name="testInternalServerError" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.112"/>
+    <testcase name="testMethodNotSupported" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.213"/>
+    <testcase name="testExceptionWithResponseStatus" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.103"/>
+    <testcase name="testMethodArgumentNotValid" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.106"/>
+    <testcase name="testParameterizedError2" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.106"/>
+    <testcase name="testUnauthorized" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.109"/>
+    <testcase name="testConcurrencyFailure" classname="com.utstar.uapollo.web.rest.errors.ExceptionTranslatorIntTest" time="0.121"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="2.129">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.094"/>
+    <testcase name="getApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.103"/>
+    <testcase name="deleteApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.194"/>
+    <testcase name="createApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.154"/>
+    <testcase name="createApplicationMetaWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.085"/>
+    <testcase name="getNonExistingApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.109"/>
+    <testcase name="checkConfigFileIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.134"/>
+    <testcase name="updateApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.265"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.117"/>
+    <testcase name="getAllApplicationMetas" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.165"/>
+    <testcase name="updateNonExistingApplicationMeta" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.115"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.12"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.121"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.092"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.128"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaResourceIntTest" time="0.133"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="2.058">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.137"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.117"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.274"/>
+    <testcase name="updateApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.138"/>
+    <testcase name="createApplicationHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.121"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.138"/>
+    <testcase name="checkServerIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.117"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.129"/>
+    <testcase name="updateNonExistingApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.129"/>
+    <testcase name="createApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.118"/>
+    <testcase name="getAllApplicationHistories" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.114"/>
+    <testcase name="deleteApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.107"/>
+    <testcase name="getNonExistingApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.105"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.093"/>
+    <testcase name="getApplicationHistory" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.106"/>
+    <testcase name="checkApplicationIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationHistoryResourceIntTest" time="0.113"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="1.357">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.089"/>
+    <testcase name="createApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.095"/>
+    <testcase name="updateApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.193"/>
+    <testcase name="getNonExistingApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.098"/>
+    <testcase name="createApplicationConfigWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.123"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.089"/>
+    <testcase name="getAllApplicationConfigs" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.098"/>
+    <testcase name="getApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.126"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.103"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.12"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.082"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.136"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="2.008">
+    <testcase name="createClientHeartbeatInfoWithExistingId" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.138"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.089"/>
+    <testcase name="getAllClientHeartbeatInfos" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.112"/>
+    <testcase name="getClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.1"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.175"/>
+    <testcase name="checkApplicationMetaNameIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.113"/>
+    <testcase name="updateNonExistingClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.109"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.092"/>
+    <testcase name="checkHeartbeatVersionIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.104"/>
+    <testcase name="checkHeartbeatTimeIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.103"/>
+    <testcase name="checkUpdateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.117"/>
+    <testcase name="deleteClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.158"/>
+    <testcase name="getNonExistingClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.107"/>
+    <testcase name="createClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.122"/>
+    <testcase name="updateClientHeartbeatInfo" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.166"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.089"/>
+    <testcase name="checkUpdateVersionIsRequired" classname="com.utstar.uapollo.web.rest.ClientHeartbeatInfoResourceIntTest" time="0.114"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="1.4">
+    <testcase name="updateGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.145"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.091"/>
+    <testcase name="updateNonExistingGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.12"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.094"/>
+    <testcase name="getNonExistingGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.099"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.104"/>
+    <testcase name="createGlobalConfigWithExistingId" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.102"/>
+    <testcase name="getGlobalConfig" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.101"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.112"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.105"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.091"/>
+    <testcase name="getAllGlobalConfigs" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.097"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.GlobalConfigResourceIntTest" time="0.139"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="3.629">
+    <testcase name="testRegisterInvalidEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.213"/>
+    <testcase name="testRegisterInvalidLogin" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.25"/>
+    <testcase name="testRegisterInvalidPassword" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.231"/>
+    <testcase name="testRegisterNullPassword" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.229"/>
+    <testcase name="testRegisterAdminIsIgnored" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.318"/>
+    <testcase name="testActivateAccountWithWrongKey" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.187"/>
+    <testcase name="testGetUnknownAccount" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.227"/>
+    <testcase name="testRegisterDuplicateEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.335"/>
+    <testcase name="testRegisterDuplicateLogin" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.329"/>
+    <testcase name="testAuthenticatedUser" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.183"/>
+    <testcase name="testRequestPasswordResetWrongEmail" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.204"/>
+    <testcase name="testRegisterValid" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.317"/>
+    <testcase name="testNonAuthenticatedUser" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.174"/>
+    <testcase name="testGetExistingAccount" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.216"/>
+    <testcase name="testFinishPasswordResetWrongKey" classname="com.utstar.uapollo.web.rest.AccountResourceIntTest" time="0.216"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.service.MailServiceIntTest" time="0.365">
+    <testcase name="testSendPasswordResetMail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.13"/>
+    <testcase name="testCreationEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.021"/>
+    <testcase name="testSendEmailWithException" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.02"/>
+    <testcase name="testSendHtmlEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.014"/>
+    <testcase name="testSendMultipartHtmlEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.079"/>
+    <testcase name="testSendEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.015"/>
+    <testcase name="testSendMultipartEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.018"/>
+    <testcase name="testSendActivationEmail" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.037"/>
+    <testcase name="testSendEmailFromTemplate" classname="com.utstar.uapollo.service.MailServiceIntTest" time="0.03"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="1.238">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.093"/>
+    <testcase name="getAllNodes" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.109"/>
+    <testcase name="updateNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.114"/>
+    <testcase name="createNodeWithExistingId" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.105"/>
+    <testcase name="getNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.094"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.11"/>
+    <testcase name="getNonExistingNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.098"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.102"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.107"/>
+    <testcase name="createNode" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.094"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.095"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.NodeResourceIntTest" time="0.117"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="2.139">
+    <testcase name="deleteApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.158"/>
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.094"/>
+    <testcase name="checkApplicationMetaIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.109"/>
+    <testcase name="getApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.114"/>
+    <testcase name="checkOperationIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.171"/>
+    <testcase name="updateApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.136"/>
+    <testcase name="checkConfigFileIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.108"/>
+    <testcase name="checkProjectIdIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.117"/>
+    <testcase name="updateNonExistingApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.11"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.096"/>
+    <testcase name="getNonExistingApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.092"/>
+    <testcase name="getAllApplicationMetaHistories" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.106"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.121"/>
+    <testcase name="createApplicationMetaHistoryWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.107"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.153"/>
+    <testcase name="createApplicationMetaHistory" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.104"/>
+    <testcase name="checkNameIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.115"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationMetaHistoryResourceIntTest" time="0.127"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.08">
+    <testcase name="getProfileInfoWithoutActiveProfiles" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.016"/>
+    <testcase name="getProfileInfoWithoutRibbon" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.023"/>
+    <testcase name="getProfileInfoWithRibbon" classname="com.utstar.uapollo.web.rest.ProfileInfoResourceIntTest" time="0.041"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="1.544">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.097"/>
+    <testcase name="createNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.109"/>
+    <testcase name="deleteNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.094"/>
+    <testcase name="updateNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.1"/>
+    <testcase name="getNonExistingNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.097"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.089"/>
+    <testcase name="createNodeConfigWithExistingId" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.099"/>
+    <testcase name="checkValueIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.099"/>
+    <testcase name="getNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.093"/>
+    <testcase name="updateNonExistingNodeConfig" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.097"/>
+    <testcase name="getAllNodeConfigs" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.111"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.111"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.122"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.095"/>
+    <testcase name="checkKeyIsRequired" classname="com.utstar.uapollo.web.rest.NodeConfigResourceIntTest" time="0.131"/>
+  </testsuite>
+  <testsuite name="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="1.601">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.093"/>
+    <testcase name="getAllServers" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.197"/>
+    <testcase name="updateServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.11"/>
+    <testcase name="deleteServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.099"/>
+    <testcase name="checkIpIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.116"/>
+    <testcase name="updateNonExistingServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.144"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.098"/>
+    <testcase name="createServerWithExistingId" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.108"/>
+    <testcase name="getNonExistingServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.138"/>
+    <testcase name="getServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.098"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.096"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.096"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.1"/>
+    <testcase name="createServer" classname="com.utstar.uapollo.web.rest.ServerResourceIntTest" time="0.108"/>
+  </testsuite>
+</testrun>

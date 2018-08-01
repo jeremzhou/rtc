@@ -1,0 +1,83 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.PrivateConfigHistory;
+import com.utstar.uapollo.service.dto.PrivateConfigHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class PrivateConfigHistoryMapperImpl implements PrivateConfigHistoryMapper {
+
+    @Override
+    public PrivateConfigHistory toEntity(PrivateConfigHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        PrivateConfigHistory privateConfigHistory = new PrivateConfigHistory();
+
+        privateConfigHistory.setId( dto.getId() );
+        privateConfigHistory.setApplicationId( dto.getApplicationId() );
+        privateConfigHistory.setPrivateConfigId( dto.getPrivateConfigId() );
+        privateConfigHistory.setKey( dto.getKey() );
+        privateConfigHistory.setValue( dto.getValue() );
+        privateConfigHistory.setOperation( dto.getOperation() );
+        privateConfigHistory.setCreateTime( dto.getCreateTime() );
+
+        return privateConfigHistory;
+    }
+
+    @Override
+    public PrivateConfigHistoryDTO toDto(PrivateConfigHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        PrivateConfigHistoryDTO privateConfigHistoryDTO = new PrivateConfigHistoryDTO();
+
+        privateConfigHistoryDTO.setId( entity.getId() );
+        privateConfigHistoryDTO.setApplicationId( entity.getApplicationId() );
+        privateConfigHistoryDTO.setPrivateConfigId( entity.getPrivateConfigId() );
+        privateConfigHistoryDTO.setKey( entity.getKey() );
+        privateConfigHistoryDTO.setValue( entity.getValue() );
+        privateConfigHistoryDTO.setOperation( entity.getOperation() );
+        privateConfigHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return privateConfigHistoryDTO;
+    }
+
+    @Override
+    public List<PrivateConfigHistory> toEntity(List<PrivateConfigHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<PrivateConfigHistory> list = new ArrayList<PrivateConfigHistory>( dtoList.size() );
+        for ( PrivateConfigHistoryDTO privateConfigHistoryDTO : dtoList ) {
+            list.add( toEntity( privateConfigHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<PrivateConfigHistoryDTO> toDto(List<PrivateConfigHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<PrivateConfigHistoryDTO> list = new ArrayList<PrivateConfigHistoryDTO>( entityList.size() );
+        for ( PrivateConfigHistory privateConfigHistory : entityList ) {
+            list.add( toDto( privateConfigHistory ) );
+        }
+
+        return list;
+    }
+}

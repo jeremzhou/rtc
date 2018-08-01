@@ -1,0 +1,11 @@
+package com.netty.util;
+
+import io.netty.handler.codec.marshalling.MarshallingDecoder;
+
+public final class MarshallingCodeCFactory {
+
+	public static MarshallingDecoder buildMarshallingDecoder() {
+		
+		final MarshallerFactory marshallerFactory = Marshalling.
+	}
+}

@@ -1,0 +1,104 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.Application;
+import com.utstar.uapollo.domain.PrivateConfig;
+import com.utstar.uapollo.service.dto.PrivateConfigDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class PrivateConfigMapperImpl implements PrivateConfigMapper {
+
+    @Autowired
+    private ApplicationMapper applicationMapper;
+
+    @Override
+    public List<PrivateConfig> toEntity(List<PrivateConfigDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<PrivateConfig> list = new ArrayList<PrivateConfig>( dtoList.size() );
+        for ( PrivateConfigDTO privateConfigDTO : dtoList ) {
+            list.add( toEntity( privateConfigDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<PrivateConfigDTO> toDto(List<PrivateConfig> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<PrivateConfigDTO> list = new ArrayList<PrivateConfigDTO>( entityList.size() );
+        for ( PrivateConfig privateConfig : entityList ) {
+            list.add( toDto( privateConfig ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public PrivateConfigDTO toDto(PrivateConfig privateConfig) {
+        if ( privateConfig == null ) {
+            return null;
+        }
+
+        PrivateConfigDTO privateConfigDTO = new PrivateConfigDTO();
+
+        Long id = privateConfigApplicationId( privateConfig );
+        if ( id != null ) {
+            privateConfigDTO.setApplicationId( id );
+        }
+        privateConfigDTO.setId( privateConfig.getId() );
+        privateConfigDTO.setKey( privateConfig.getKey() );
+        privateConfigDTO.setValue( privateConfig.getValue() );
+        privateConfigDTO.setCreateTime( privateConfig.getCreateTime() );
+        privateConfigDTO.setModifyTime( privateConfig.getModifyTime() );
+
+        return privateConfigDTO;
+    }
+
+    @Override
+    public PrivateConfig toEntity(PrivateConfigDTO privateConfigDTO) {
+        if ( privateConfigDTO == null ) {
+            return null;
+        }
+
+        PrivateConfig privateConfig = new PrivateConfig();
+
+        privateConfig.setApplication( applicationMapper.fromId( privateConfigDTO.getApplicationId() ) );
+        privateConfig.setId( privateConfigDTO.getId() );
+        privateConfig.setKey( privateConfigDTO.getKey() );
+        privateConfig.setValue( privateConfigDTO.getValue() );
+        privateConfig.setCreateTime( privateConfigDTO.getCreateTime() );
+        privateConfig.setModifyTime( privateConfigDTO.getModifyTime() );
+
+        return privateConfig;
+    }
+
+    private Long privateConfigApplicationId(PrivateConfig privateConfig) {
+        if ( privateConfig == null ) {
+            return null;
+        }
+        Application application = privateConfig.getApplication();
+        if ( application == null ) {
+            return null;
+        }
+        Long id = application.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

@@ -1,0 +1,71 @@
+package com.netty.client;
+
+import java.net.InetAddress;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.coyote.RequestInfo;
+
+import io.netty.channel.ChannelHandlerAdapter;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.ReferenceCountUtil;
+import io.netty.util.Timeout;
+import io.netty.util.concurrent.ScheduledFuture;
+
+public class ClienHeartBeattHandler extends ChannelHandlerAdapter{
+
+	private ScheduledExecutorService schedule = Executors.newScheduledThreadPool(1);
+
+    private ScheduledFuture<?> heartBeat;
+//	主动向服务器发送认证请求
+	private InetAddress addr;
+	private static final String SUCCESS_KEY = "auth_success_key";
+	
+	public  void channelActive(ChannelHandlerContext ctx) throws Exception {
+		// TODO Auto-generated method stub
+
+		addr = InetAddress.getLocalHost();
+		String ip = addr.getHostAddress();
+		String key = "1234";
+		String auth =ip + "," + key;
+		ctx.writeAndFlush(auth);
+	}
+	
+	public void channelRead(ChannelHandlerContext ctx, Object msg)throws Exception {
+		// TODO Auto-generated method stub
+		try {
+			if(msg instanceof String) {
+				String ret = (String)msg;
+				if(SUCCESS_KEY.equals(ret)) {
+//					握手成功，主动发送心跳消息
+					this.heartBeat = this.schedule.scheduleWithFixedDelay(new HeartBeatTask(ctx), 0, 2, TimeUnit.SECONDS);
+					 System.out.println(msg);
+				}else {
+					System.out.println(msg);
+				}
+			}
+		} finally {
+			ReferenceCountUtil.release(msg);
+			// TODO: handle finally clause
+		}
+	}
+	
+	private class HeartBeatTask implements Runnable {
+		// TODO Auto-generated constructor stub
+			private final ChannelHandlerContext ctx;
+			public HeartBeatTask(final ChannelHandlerContext ctx) {
+				this.ctx = ctx;
+			}
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					RequestInfo info = new RequestInfo(null);
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+			}
+			
+	}
+}

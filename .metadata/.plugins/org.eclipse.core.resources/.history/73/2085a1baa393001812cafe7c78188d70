@@ -1,0 +1,60 @@
+/**
+ * created on 2018年7月26日 上午9:48:10
+ */
+package com.utstar.uapollo;
+
+
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.utstar.uapollo.domain.NodeHistory;
+import com.utstar.uapollo.domain.PrivateConfig;
+import com.utstar.uapollo.repository.PrivateConfigRepository;
+
+/**
+ * @author BenQ
+ * @date 2018年7月26日
+ *
+ */
+public class DemoTest {
+	
+	 @Autowired
+	 private PrivateConfigRepository privateConfigRepository;
+    
+    	@Test
+    	public void test() {
+        NodeHistory nodeHistory1 = new NodeHistory();
+        nodeHistory1.setId(1L);
+        NodeHistory nodeHistory2 = new NodeHistory();
+        nodeHistory2.setId(nodeHistory1.getId());
+       /* if(nodeHistory1.equals(nodeHistory2)) {
+          System.out.println("is true");
+        }*/
+//        int databaseSizeBeforeUpdate = privateConfigRepository.findAll().size();
+       /* if(databaseSizeBeforeUpdate == 0) {
+        	System.out.println("is null ");
+        };*/
+        try {
+        	  List<PrivateConfig> privateConfigList = privateConfigRepository.findAll();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+      
+        if(privateConfigList == null) {
+        	System.out.println("privateConfigList :");
+        }
+//        System.out.println("databaseSizeBeforeUpdate::"+databaseSizeBeforeUpdate + 1);
+        System.out.println("privateConfigList::"+privateConfigList.size());
+//        System.out.println(nodeHistory1.toString());
+//        System.out.println(nodeHistory2.toString());
+       /* System.out.println(nodeHistory2.toString());
+        assertThat(nodeHistory1).isEqualTo(nodeHistory2);
+        nodeHistory2.setId(2L);
+        assertThat(nodeHistory1).isNotEqualTo(nodeHistory2);
+        nodeHistory1.setId(null);
+        assertThat(nodeHistory1).isNotEqualTo(nodeHistory2);*/
+        
+    }
+}

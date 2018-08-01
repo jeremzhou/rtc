@@ -1,0 +1,8 @@
+package com.netty.beginner;
+
+import io.netty.channel.ChannelInboundHandlerAdapter;
+
+public class DiscardServerHandler extends ChannelInboundHandlerAdapter{
+
+	public void channelRead()
+}

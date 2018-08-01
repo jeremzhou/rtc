@@ -1,0 +1,8 @@
+package com.netty.server;
+
+import io.netty.channel.ChannelHandlerAdapter;
+
+public class ServerHeartBeatHandler extends ChannelHandlerAdapter{
+
+	private static HashMap<String, String> AUTH_IP_MAP = new HashMap<String, String>();
+}

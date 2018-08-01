@@ -1,0 +1,23 @@
+package com.netty.server;
+
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.logging.LogLevel;
+
+public class Server {
+	
+	public static void main(String[] args) {
+		
+		EventLoopGroup pGroup = new NioEventLoopGroup(); 
+		EventLoopGroup cGroup = new NioEventLoopGroup();
+		
+		ServerBootstrap b = new ServerBootstrap();
+		b.group(pGroup, cGroup).channel(NioServerSocketChannel.class)
+							    .option(ChannelOption.SO_BACKLOG, 1024)
+							    .handler(new LoggingHandler(LogLevel.INFO))
+							    .childHandler
+	}
+}

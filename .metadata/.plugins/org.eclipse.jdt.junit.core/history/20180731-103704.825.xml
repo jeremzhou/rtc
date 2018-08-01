@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ApplicationConfigResourceIntTest" project="uapollo5" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="2.383">
+    <testcase name="equalsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.337"/>
+    <testcase name="createApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.119"/>
+    <testcase name="updateApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.448"/>
+    <testcase name="getNonExistingApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.247"/>
+    <testcase name="createApplicationConfigWithExistingId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.162"/>
+    <testcase name="dtoEqualsVerifier" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.105"/>
+    <testcase name="getAllApplicationConfigs" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.235"/>
+    <testcase name="getApplicationConfig" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.124"/>
+    <testcase name="checkCreateTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.223"/>
+    <testcase name="checkModifyTimeIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.118"/>
+    <testcase name="testEntityFromId" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.143"/>
+    <testcase name="checkConfigContentIsRequired" classname="com.utstar.uapollo.web.rest.ApplicationConfigResourceIntTest" time="0.121"/>
+  </testsuite>
+</testrun>

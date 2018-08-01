@@ -1,0 +1,10 @@
+package com.utstat.test;
+
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class BlockingQueueTest {
+	
+	public static class Basket {
+		BlockingQueue<String> basker = new ArrayBlockingQueue<String>(3);
+	}
+}

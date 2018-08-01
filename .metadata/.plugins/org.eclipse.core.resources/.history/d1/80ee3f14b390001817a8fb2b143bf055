@@ -1,0 +1,81 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.NodeHistory;
+import com.utstar.uapollo.service.dto.NodeHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class NodeHistoryMapperImpl implements NodeHistoryMapper {
+
+    @Override
+    public NodeHistory toEntity(NodeHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        NodeHistory nodeHistory = new NodeHistory();
+
+        nodeHistory.setId( dto.getId() );
+        nodeHistory.setProjectId( dto.getProjectId() );
+        nodeHistory.setNodeId( dto.getNodeId() );
+        nodeHistory.setName( dto.getName() );
+        nodeHistory.setOperation( dto.getOperation() );
+        nodeHistory.setCreateTime( dto.getCreateTime() );
+
+        return nodeHistory;
+    }
+
+    @Override
+    public NodeHistoryDTO toDto(NodeHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        NodeHistoryDTO nodeHistoryDTO = new NodeHistoryDTO();
+
+        nodeHistoryDTO.setId( entity.getId() );
+        nodeHistoryDTO.setProjectId( entity.getProjectId() );
+        nodeHistoryDTO.setNodeId( entity.getNodeId() );
+        nodeHistoryDTO.setName( entity.getName() );
+        nodeHistoryDTO.setOperation( entity.getOperation() );
+        nodeHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return nodeHistoryDTO;
+    }
+
+    @Override
+    public List<NodeHistory> toEntity(List<NodeHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<NodeHistory> list = new ArrayList<NodeHistory>( dtoList.size() );
+        for ( NodeHistoryDTO nodeHistoryDTO : dtoList ) {
+            list.add( toEntity( nodeHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<NodeHistoryDTO> toDto(List<NodeHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<NodeHistoryDTO> list = new ArrayList<NodeHistoryDTO>( entityList.size() );
+        for ( NodeHistory nodeHistory : entityList ) {
+            list.add( toDto( nodeHistory ) );
+        }
+
+        return list;
+    }
+}

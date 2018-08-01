@@ -1,0 +1,85 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationMetaHistory;
+import com.utstar.uapollo.service.dto.ApplicationMetaHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationMetaHistoryMapperImpl implements ApplicationMetaHistoryMapper {
+
+    @Override
+    public ApplicationMetaHistory toEntity(ApplicationMetaHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ApplicationMetaHistory applicationMetaHistory = new ApplicationMetaHistory();
+
+        applicationMetaHistory.setId( dto.getId() );
+        applicationMetaHistory.setProjectId( dto.getProjectId() );
+        applicationMetaHistory.setApplicationMetaId( dto.getApplicationMetaId() );
+        applicationMetaHistory.setName( dto.getName() );
+        applicationMetaHistory.setConfigFile( dto.getConfigFile() );
+        applicationMetaHistory.setConfigContent( dto.getConfigContent() );
+        applicationMetaHistory.setOperation( dto.getOperation() );
+        applicationMetaHistory.setCreateTime( dto.getCreateTime() );
+
+        return applicationMetaHistory;
+    }
+
+    @Override
+    public ApplicationMetaHistoryDTO toDto(ApplicationMetaHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ApplicationMetaHistoryDTO applicationMetaHistoryDTO = new ApplicationMetaHistoryDTO();
+
+        applicationMetaHistoryDTO.setId( entity.getId() );
+        applicationMetaHistoryDTO.setProjectId( entity.getProjectId() );
+        applicationMetaHistoryDTO.setApplicationMetaId( entity.getApplicationMetaId() );
+        applicationMetaHistoryDTO.setName( entity.getName() );
+        applicationMetaHistoryDTO.setConfigFile( entity.getConfigFile() );
+        applicationMetaHistoryDTO.setConfigContent( entity.getConfigContent() );
+        applicationMetaHistoryDTO.setOperation( entity.getOperation() );
+        applicationMetaHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return applicationMetaHistoryDTO;
+    }
+
+    @Override
+    public List<ApplicationMetaHistory> toEntity(List<ApplicationMetaHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ApplicationMetaHistory> list = new ArrayList<ApplicationMetaHistory>( dtoList.size() );
+        for ( ApplicationMetaHistoryDTO applicationMetaHistoryDTO : dtoList ) {
+            list.add( toEntity( applicationMetaHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationMetaHistoryDTO> toDto(List<ApplicationMetaHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationMetaHistoryDTO> list = new ArrayList<ApplicationMetaHistoryDTO>( entityList.size() );
+        for ( ApplicationMetaHistory applicationMetaHistory : entityList ) {
+            list.add( toDto( applicationMetaHistory ) );
+        }
+
+        return list;
+    }
+}

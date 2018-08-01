@@ -1,0 +1,123 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.Application;
+import com.utstar.uapollo.domain.ApplicationMeta;
+import com.utstar.uapollo.domain.Server;
+import com.utstar.uapollo.service.dto.ApplicationDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationMapperImpl implements ApplicationMapper {
+
+    @Autowired
+    private ApplicationMetaMapper applicationMetaMapper;
+    @Autowired
+    private ServerMapper serverMapper;
+
+    @Override
+    public List<Application> toEntity(List<ApplicationDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<Application> list = new ArrayList<Application>( dtoList.size() );
+        for ( ApplicationDTO applicationDTO : dtoList ) {
+            list.add( toEntity( applicationDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationDTO> toDto(List<Application> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationDTO> list = new ArrayList<ApplicationDTO>( entityList.size() );
+        for ( Application application : entityList ) {
+            list.add( toDto( application ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public ApplicationDTO toDto(Application application) {
+        if ( application == null ) {
+            return null;
+        }
+
+        ApplicationDTO applicationDTO = new ApplicationDTO();
+
+        Long id = applicationApplicationMetaId( application );
+        if ( id != null ) {
+            applicationDTO.setApplicationMetaId( id );
+        }
+        Long id1 = applicationServerId( application );
+        if ( id1 != null ) {
+            applicationDTO.setServerId( id1 );
+        }
+        applicationDTO.setId( application.getId() );
+        applicationDTO.setCreateTime( application.getCreateTime() );
+        applicationDTO.setModifyTime( application.getModifyTime() );
+
+        return applicationDTO;
+    }
+
+    @Override
+    public Application toEntity(ApplicationDTO applicationDTO) {
+        if ( applicationDTO == null ) {
+            return null;
+        }
+
+        Application application = new Application();
+
+        application.setApplicationMeta( applicationMetaMapper.fromId( applicationDTO.getApplicationMetaId() ) );
+        application.setServer( serverMapper.fromId( applicationDTO.getServerId() ) );
+        application.setId( applicationDTO.getId() );
+        application.setCreateTime( applicationDTO.getCreateTime() );
+        application.setModifyTime( applicationDTO.getModifyTime() );
+
+        return application;
+    }
+
+    private Long applicationApplicationMetaId(Application application) {
+        if ( application == null ) {
+            return null;
+        }
+        ApplicationMeta applicationMeta = application.getApplicationMeta();
+        if ( applicationMeta == null ) {
+            return null;
+        }
+        Long id = applicationMeta.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+
+    private Long applicationServerId(Application application) {
+        if ( application == null ) {
+            return null;
+        }
+        Server server = application.getServer();
+        if ( server == null ) {
+            return null;
+        }
+        Long id = server.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

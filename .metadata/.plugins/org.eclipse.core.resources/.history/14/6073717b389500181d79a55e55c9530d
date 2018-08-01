@@ -1,0 +1,21 @@
+package com.netty.client;
+
+import com.netty.server.UserData;
+
+import io.netty.channel.ChannelHandlerAdapter;
+import io.netty.channel.ChannelHandlerContext;
+
+public class ClientHandler extends ChannelHandlerAdapter {
+	
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+	}
+
+	public void channelRead(ChannelHandlerContext ctx,Object msg) {
+		try {
+			UserData user = (UserData)msg;
+			System.out.println("服务器返回的消息： "+ user.getId() + "," + user.getName() + "," + user.getResponseMessage() );
+		} finally {
+			// TODO: handle finally clause
+		}
+	}
+}

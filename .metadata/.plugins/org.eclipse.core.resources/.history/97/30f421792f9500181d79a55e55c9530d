@@ -1,0 +1,11 @@
+package com.netty.client;
+
+public class Client {
+	
+	private static class SingletonHolder {
+		static final Client SingletonHolder() {
+			static final Client instance = new Client();
+		}
+		
+	}
+}

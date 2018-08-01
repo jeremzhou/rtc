@@ -1,0 +1,59 @@
+package com.utstat.test;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+public class BlockingQueueTest {
+	
+	public static class Basket {
+		BlockingQueue<String> basket = new ArrayBlockingQueue<String>(3);
+		
+		public void produce() throws InterruptedException {
+			basket.put("An apple");
+		}
+		
+		public String consume() throws InterruptedException {
+			String apple =basket.take();
+			return apple;
+		}
+		
+		public int getAppleNumber() {
+			return basket.size();
+		}
+	}
+	
+	
+	public static void testBasket() {
+		final Basket basket = new Basket();
+		
+		class Producer implements Runnable{
+
+			@Override
+			public void run() {
+				try {
+					while(true) {
+						System.out.println("生产者生产：" + System.currentTimeMillis());
+						basket.produce();
+						System.out.println("生产者生产完毕：" + System.currentTimeMillis());
+						System.out.println("生产完后数量：" + basket.getAppleNumber() + "个");
+						Thread.sleep(3000);
+					
+					}
+				} catch (Exception e) {
+				}
+			}
+		} 
+		
+		class Consumer implements Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
+			}
+		}
+
+		
+
+	}
+
+}

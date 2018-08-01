@@ -1,0 +1,81 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationConfigHistory;
+import com.utstar.uapollo.service.dto.ApplicationConfigHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationConfigHistoryMapperImpl implements ApplicationConfigHistoryMapper {
+
+    @Override
+    public ApplicationConfigHistory toEntity(ApplicationConfigHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ApplicationConfigHistory applicationConfigHistory = new ApplicationConfigHistory();
+
+        applicationConfigHistory.setId( dto.getId() );
+        applicationConfigHistory.setApplicationId( dto.getApplicationId() );
+        applicationConfigHistory.setApplicationConfigid( dto.getApplicationConfigid() );
+        applicationConfigHistory.setConfigContent( dto.getConfigContent() );
+        applicationConfigHistory.setOperation( dto.getOperation() );
+        applicationConfigHistory.setCreateTime( dto.getCreateTime() );
+
+        return applicationConfigHistory;
+    }
+
+    @Override
+    public ApplicationConfigHistoryDTO toDto(ApplicationConfigHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ApplicationConfigHistoryDTO applicationConfigHistoryDTO = new ApplicationConfigHistoryDTO();
+
+        applicationConfigHistoryDTO.setId( entity.getId() );
+        applicationConfigHistoryDTO.setApplicationId( entity.getApplicationId() );
+        applicationConfigHistoryDTO.setApplicationConfigid( entity.getApplicationConfigid() );
+        applicationConfigHistoryDTO.setConfigContent( entity.getConfigContent() );
+        applicationConfigHistoryDTO.setOperation( entity.getOperation() );
+        applicationConfigHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return applicationConfigHistoryDTO;
+    }
+
+    @Override
+    public List<ApplicationConfigHistory> toEntity(List<ApplicationConfigHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ApplicationConfigHistory> list = new ArrayList<ApplicationConfigHistory>( dtoList.size() );
+        for ( ApplicationConfigHistoryDTO applicationConfigHistoryDTO : dtoList ) {
+            list.add( toEntity( applicationConfigHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationConfigHistoryDTO> toDto(List<ApplicationConfigHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationConfigHistoryDTO> list = new ArrayList<ApplicationConfigHistoryDTO>( entityList.size() );
+        for ( ApplicationConfigHistory applicationConfigHistory : entityList ) {
+            list.add( toDto( applicationConfigHistory ) );
+        }
+
+        return list;
+    }
+}

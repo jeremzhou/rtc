@@ -1,0 +1,104 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationMeta;
+import com.utstar.uapollo.domain.GlobalConfig;
+import com.utstar.uapollo.service.dto.GlobalConfigDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class GlobalConfigMapperImpl implements GlobalConfigMapper {
+
+    @Autowired
+    private ApplicationMetaMapper applicationMetaMapper;
+
+    @Override
+    public List<GlobalConfig> toEntity(List<GlobalConfigDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<GlobalConfig> list = new ArrayList<GlobalConfig>( dtoList.size() );
+        for ( GlobalConfigDTO globalConfigDTO : dtoList ) {
+            list.add( toEntity( globalConfigDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<GlobalConfigDTO> toDto(List<GlobalConfig> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<GlobalConfigDTO> list = new ArrayList<GlobalConfigDTO>( entityList.size() );
+        for ( GlobalConfig globalConfig : entityList ) {
+            list.add( toDto( globalConfig ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public GlobalConfigDTO toDto(GlobalConfig globalConfig) {
+        if ( globalConfig == null ) {
+            return null;
+        }
+
+        GlobalConfigDTO globalConfigDTO = new GlobalConfigDTO();
+
+        Long id = globalConfigApplicationMetaId( globalConfig );
+        if ( id != null ) {
+            globalConfigDTO.setApplicationMetaId( id );
+        }
+        globalConfigDTO.setId( globalConfig.getId() );
+        globalConfigDTO.setKey( globalConfig.getKey() );
+        globalConfigDTO.setValue( globalConfig.getValue() );
+        globalConfigDTO.setCreateTime( globalConfig.getCreateTime() );
+        globalConfigDTO.setModifyTime( globalConfig.getModifyTime() );
+
+        return globalConfigDTO;
+    }
+
+    @Override
+    public GlobalConfig toEntity(GlobalConfigDTO globalConfigDTO) {
+        if ( globalConfigDTO == null ) {
+            return null;
+        }
+
+        GlobalConfig globalConfig = new GlobalConfig();
+
+        globalConfig.setApplicationMeta( applicationMetaMapper.fromId( globalConfigDTO.getApplicationMetaId() ) );
+        globalConfig.setId( globalConfigDTO.getId() );
+        globalConfig.setKey( globalConfigDTO.getKey() );
+        globalConfig.setValue( globalConfigDTO.getValue() );
+        globalConfig.setCreateTime( globalConfigDTO.getCreateTime() );
+        globalConfig.setModifyTime( globalConfigDTO.getModifyTime() );
+
+        return globalConfig;
+    }
+
+    private Long globalConfigApplicationMetaId(GlobalConfig globalConfig) {
+        if ( globalConfig == null ) {
+            return null;
+        }
+        ApplicationMeta applicationMeta = globalConfig.getApplicationMeta();
+        if ( applicationMeta == null ) {
+            return null;
+        }
+        Long id = applicationMeta.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

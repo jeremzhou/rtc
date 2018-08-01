@@ -1,0 +1,81 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.ApplicationHistory;
+import com.utstar.uapollo.service.dto.ApplicationHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ApplicationHistoryMapperImpl implements ApplicationHistoryMapper {
+
+    @Override
+    public ApplicationHistory toEntity(ApplicationHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        ApplicationHistory applicationHistory = new ApplicationHistory();
+
+        applicationHistory.setId( dto.getId() );
+        applicationHistory.setApplicationMetaId( dto.getApplicationMetaId() );
+        applicationHistory.setServerId( dto.getServerId() );
+        applicationHistory.setApplicationId( dto.getApplicationId() );
+        applicationHistory.setOperation( dto.getOperation() );
+        applicationHistory.setCreateTime( dto.getCreateTime() );
+
+        return applicationHistory;
+    }
+
+    @Override
+    public ApplicationHistoryDTO toDto(ApplicationHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        ApplicationHistoryDTO applicationHistoryDTO = new ApplicationHistoryDTO();
+
+        applicationHistoryDTO.setId( entity.getId() );
+        applicationHistoryDTO.setApplicationMetaId( entity.getApplicationMetaId() );
+        applicationHistoryDTO.setServerId( entity.getServerId() );
+        applicationHistoryDTO.setApplicationId( entity.getApplicationId() );
+        applicationHistoryDTO.setOperation( entity.getOperation() );
+        applicationHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return applicationHistoryDTO;
+    }
+
+    @Override
+    public List<ApplicationHistory> toEntity(List<ApplicationHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<ApplicationHistory> list = new ArrayList<ApplicationHistory>( dtoList.size() );
+        for ( ApplicationHistoryDTO applicationHistoryDTO : dtoList ) {
+            list.add( toEntity( applicationHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ApplicationHistoryDTO> toDto(List<ApplicationHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ApplicationHistoryDTO> list = new ArrayList<ApplicationHistoryDTO>( entityList.size() );
+        for ( ApplicationHistory applicationHistory : entityList ) {
+            list.add( toDto( applicationHistory ) );
+        }
+
+        return list;
+    }
+}

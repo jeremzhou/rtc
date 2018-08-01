@@ -1,0 +1,83 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.GlobalConfigHistory;
+import com.utstar.uapollo.service.dto.GlobalConfigHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:56+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class GlobalConfigHistoryMapperImpl implements GlobalConfigHistoryMapper {
+
+    @Override
+    public GlobalConfigHistory toEntity(GlobalConfigHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        GlobalConfigHistory globalConfigHistory = new GlobalConfigHistory();
+
+        globalConfigHistory.setId( dto.getId() );
+        globalConfigHistory.setApplicationMetaId( dto.getApplicationMetaId() );
+        globalConfigHistory.setGlobalConfigId( dto.getGlobalConfigId() );
+        globalConfigHistory.setKey( dto.getKey() );
+        globalConfigHistory.setValue( dto.getValue() );
+        globalConfigHistory.setOperation( dto.getOperation() );
+        globalConfigHistory.setCreateTime( dto.getCreateTime() );
+
+        return globalConfigHistory;
+    }
+
+    @Override
+    public GlobalConfigHistoryDTO toDto(GlobalConfigHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        GlobalConfigHistoryDTO globalConfigHistoryDTO = new GlobalConfigHistoryDTO();
+
+        globalConfigHistoryDTO.setId( entity.getId() );
+        globalConfigHistoryDTO.setApplicationMetaId( entity.getApplicationMetaId() );
+        globalConfigHistoryDTO.setGlobalConfigId( entity.getGlobalConfigId() );
+        globalConfigHistoryDTO.setKey( entity.getKey() );
+        globalConfigHistoryDTO.setValue( entity.getValue() );
+        globalConfigHistoryDTO.setOperation( entity.getOperation() );
+        globalConfigHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return globalConfigHistoryDTO;
+    }
+
+    @Override
+    public List<GlobalConfigHistory> toEntity(List<GlobalConfigHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<GlobalConfigHistory> list = new ArrayList<GlobalConfigHistory>( dtoList.size() );
+        for ( GlobalConfigHistoryDTO globalConfigHistoryDTO : dtoList ) {
+            list.add( toEntity( globalConfigHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<GlobalConfigHistoryDTO> toDto(List<GlobalConfigHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<GlobalConfigHistoryDTO> list = new ArrayList<GlobalConfigHistoryDTO>( entityList.size() );
+        for ( GlobalConfigHistory globalConfigHistory : entityList ) {
+            list.add( toDto( globalConfigHistory ) );
+        }
+
+        return list;
+    }
+}

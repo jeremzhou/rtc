@@ -1,0 +1,16 @@
+package com.netty.beginner;
+
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+
+public class DiscardServer {
+
+	private int port;
+	public DiscardServer(int port) {
+		this.port = port;
+	}
+	public void run()throws Exception {
+		EventLoopGroup boosGroup = new NioEventLoopGroup();
+		EventLoopGroup workerGroup = new NioEventLoopGroup();
+	}
+}

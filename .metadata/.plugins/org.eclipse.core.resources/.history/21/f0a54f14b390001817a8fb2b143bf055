@@ -1,0 +1,102 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.Node;
+import com.utstar.uapollo.domain.Server;
+import com.utstar.uapollo.service.dto.ServerDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class ServerMapperImpl implements ServerMapper {
+
+    @Autowired
+    private NodeMapper nodeMapper;
+
+    @Override
+    public List<Server> toEntity(List<ServerDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<Server> list = new ArrayList<Server>( dtoList.size() );
+        for ( ServerDTO serverDTO : dtoList ) {
+            list.add( toEntity( serverDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ServerDTO> toDto(List<Server> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<ServerDTO> list = new ArrayList<ServerDTO>( entityList.size() );
+        for ( Server server : entityList ) {
+            list.add( toDto( server ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public ServerDTO toDto(Server server) {
+        if ( server == null ) {
+            return null;
+        }
+
+        ServerDTO serverDTO = new ServerDTO();
+
+        Long id = serverNodeId( server );
+        if ( id != null ) {
+            serverDTO.setNodeId( id );
+        }
+        serverDTO.setId( server.getId() );
+        serverDTO.setIp( server.getIp() );
+        serverDTO.setCreateTime( server.getCreateTime() );
+        serverDTO.setModifyTime( server.getModifyTime() );
+
+        return serverDTO;
+    }
+
+    @Override
+    public Server toEntity(ServerDTO serverDTO) {
+        if ( serverDTO == null ) {
+            return null;
+        }
+
+        Server server = new Server();
+
+        server.setNode( nodeMapper.fromId( serverDTO.getNodeId() ) );
+        server.setId( serverDTO.getId() );
+        server.setIp( serverDTO.getIp() );
+        server.setCreateTime( serverDTO.getCreateTime() );
+        server.setModifyTime( serverDTO.getModifyTime() );
+
+        return server;
+    }
+
+    private Long serverNodeId(Server server) {
+        if ( server == null ) {
+            return null;
+        }
+        Node node = server.getNode();
+        if ( node == null ) {
+            return null;
+        }
+        Long id = node.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
+}

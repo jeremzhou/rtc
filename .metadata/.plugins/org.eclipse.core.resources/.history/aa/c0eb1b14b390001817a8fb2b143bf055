@@ -1,0 +1,85 @@
+package com.utstar.uapollo.service.mapper;
+
+import com.utstar.uapollo.domain.NodeConfigHistory;
+import com.utstar.uapollo.service.dto.NodeConfigHistoryDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2018-07-26T16:25:55+0800",
+    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 3.13.101.v_OTDT_r262_201803031341, environment: Java 1.8.0_151 (Oracle Corporation)"
+)
+@Component
+public class NodeConfigHistoryMapperImpl implements NodeConfigHistoryMapper {
+
+    @Override
+    public NodeConfigHistory toEntity(NodeConfigHistoryDTO dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        NodeConfigHistory nodeConfigHistory = new NodeConfigHistory();
+
+        nodeConfigHistory.setId( dto.getId() );
+        nodeConfigHistory.setApplicationMetaId( dto.getApplicationMetaId() );
+        nodeConfigHistory.setNodeId( dto.getNodeId() );
+        nodeConfigHistory.setNodeConfigId( dto.getNodeConfigId() );
+        nodeConfigHistory.setKey( dto.getKey() );
+        nodeConfigHistory.setValue( dto.getValue() );
+        nodeConfigHistory.setOperation( dto.getOperation() );
+        nodeConfigHistory.setCreateTime( dto.getCreateTime() );
+
+        return nodeConfigHistory;
+    }
+
+    @Override
+    public NodeConfigHistoryDTO toDto(NodeConfigHistory entity) {
+        if ( entity == null ) {
+            return null;
+        }
+
+        NodeConfigHistoryDTO nodeConfigHistoryDTO = new NodeConfigHistoryDTO();
+
+        nodeConfigHistoryDTO.setId( entity.getId() );
+        nodeConfigHistoryDTO.setApplicationMetaId( entity.getApplicationMetaId() );
+        nodeConfigHistoryDTO.setNodeId( entity.getNodeId() );
+        nodeConfigHistoryDTO.setNodeConfigId( entity.getNodeConfigId() );
+        nodeConfigHistoryDTO.setKey( entity.getKey() );
+        nodeConfigHistoryDTO.setValue( entity.getValue() );
+        nodeConfigHistoryDTO.setOperation( entity.getOperation() );
+        nodeConfigHistoryDTO.setCreateTime( entity.getCreateTime() );
+
+        return nodeConfigHistoryDTO;
+    }
+
+    @Override
+    public List<NodeConfigHistory> toEntity(List<NodeConfigHistoryDTO> dtoList) {
+        if ( dtoList == null ) {
+            return null;
+        }
+
+        List<NodeConfigHistory> list = new ArrayList<NodeConfigHistory>( dtoList.size() );
+        for ( NodeConfigHistoryDTO nodeConfigHistoryDTO : dtoList ) {
+            list.add( toEntity( nodeConfigHistoryDTO ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<NodeConfigHistoryDTO> toDto(List<NodeConfigHistory> entityList) {
+        if ( entityList == null ) {
+            return null;
+        }
+
+        List<NodeConfigHistoryDTO> list = new ArrayList<NodeConfigHistoryDTO>( entityList.size() );
+        for ( NodeConfigHistory nodeConfigHistory : entityList ) {
+            list.add( toDto( nodeConfigHistory ) );
+        }
+
+        return list;
+    }
+}
