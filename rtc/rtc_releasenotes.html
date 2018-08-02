@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>rtc_releasenotes</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\utsc0167\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.5\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#2b3f6a;background-color:#eee9dd !important;border:#ddd3bb;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#9ca3b0;font-style:italic}code[class*="language-"] .token.punctuation,pre[class*="language-"] .token.punctuation{color:#9ca3b0}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#c16161}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#c16161}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#ac4343}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#8f932b}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#d08e25}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d08e25}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{background-color:rgba(255,204,0,0.03);color:rgba(106,68,28,0.77)}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#8f932b}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#d08e25}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#8f932b}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#d08e25}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#2b3f6a}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#5e78e1}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex,code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#379566}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#555;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#030303}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7e7e7e}html body strong{color:#030303}html body del{color:#7e7e7e}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7e7e7e;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#030303}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#030303;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#030303;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#030303;page-break-after:avoid}html body blockquote{color:#7e7e7e}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <ul>
+<li><a href="#v10120180717004">v1.0.1_20180717_004</a>
+<ul>
+<li><a href="#v10120180717004%E4%B8%8B%E8%BD%BD">v1.0.1_20180717_004下载</a></li>
+<li><a href="#v10120180717004%E4%BF%A1%E6%81%AF">v1.0.1_20180717_004信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10120180714003">v1.0.1_20180714_003</a>
+<ul>
+<li><a href="#v10120180714003%E4%B8%8B%E8%BD%BD">v1.0.1_20180714_003下载</a></li>
+<li><a href="#v10120180714003%E4%BF%A1%E6%81%AF">v1.0.1_20180714_003信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10120180702002">v1.0.1_20180702_002</a>
+<ul>
+<li><a href="#v10120180702002%E4%B8%8B%E8%BD%BD">v1.0.1_20180702_002下载</a></li>
+<li><a href="#v10120180702002%E4%BF%A1%E6%81%AF">v1.0.1_20180702_002信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+<li><a href="#mr">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr">未修复的MR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10120180619001">v1.0.1_20180619_001</a>
+<ul>
+<li><a href="#v10120180619001%E4%B8%8B%E8%BD%BD">v1.0.1_20180619_001下载</a></li>
+<li><a href="#v10120180619001%E4%BF%A1%E6%81%AF">v1.0.1_20180619_001信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+<li><a href="#source-code">Source Code</a>
+<ul>
+<li><a href="#code%E7%BB%93%E6%9E%84">Code结构</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AErtc">配置rtc</a>
+<ul>
+<li><a href="#rtcyml">rtc.yml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8D%87%E7%BA%A7">升级</a>
+<ul>
+<li><a href="#from-v100">From v1.0.0</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B7%A5%E5%85%B7">工具</a>
+<ul>
+<li><a href="#setprintswitchpy">setPrintSwitch.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10020180615003">v1.0.0_20180615_003</a>
+<ul>
+<li><a href="#v10020180615003%E4%B8%8B%E8%BD%BD">v1.0.0_20180615_003下载</a></li>
+<li><a href="#v10020180615003%E4%BF%A1%E6%81%AF">v1.0.0_20180615_003信息</a></li>
+<li><a href="#mr">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr">未修复的MR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10020180613002">v1.0.0_20180613_002</a>
+<ul>
+<li><a href="#v10020180613002%E4%B8%8B%E8%BD%BD">v1.0.0_20180613_002下载</a></li>
+<li><a href="#v10020180613002%E4%BF%A1%E6%81%AF">v1.0.0_20180613_002信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v10020180611001">v1.0.0_20180611_001</a>
+<ul>
+<li><a href="#v10020180611001%E4%B8%8B%E8%BD%BD">v1.0.0_20180611_001下载</a></li>
+<li><a href="#v10020180611001%E4%BF%A1%E6%81%AF">v1.0.0_20180611_001信息</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+<li><a href="#mr">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr">未修复的MR</a></li>
+</ul>
+</li>
+<li><a href="#source-code">Source Code</a>
+<ul>
+<li><a href="#code%E7%BB%93%E6%9E%84">Code结构</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83">编译环境</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85jdk">安装JDK</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85rtc">安装rtc</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AErtc">配置rtc</a>
+<ul>
+<li><a href="#setenvsh">setEnv.sh</a></li>
+<li><a href="#rtcyml">rtc.yml</a></li>
+<li><a href="#logbackxml">logback.xml</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%AF%E5%8A%A8">启动</a></li>
+</ul>
+</li>
+<li><a href="#protocol-chart">PROTOCOL CHART</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 class="mume-header" id="v101_20180717_004">v1.0.1_20180717_004</h1>
+
+<hr>
+<h2 class="mume-header" id="v101_20180717_004%E4%B8%8B%E8%BD%BD">v1.0.1_20180717_004下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc_1.0.1_20180717_004.tar.gz">rtc_1.0.1_20180717_004.tar.gz</a></td>
+<td>39dfa09b2330ab5fb41a66c2460af778aa00349b9b96d49850d4c2ae95a592b8</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc_1.0.1_20180717_004_releasenotes.html">rtc_1.0.1_20180717_004_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v101_20180717_004%E4%BF%A1%E6%81%AF">v1.0.1_20180717_004信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年7月17日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： 1，处理探针json消息中value字段非字符串的情况。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</h3>
+
+<blockquote>
+<ul>
+<li>None</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98">改变</h3>
+
+<blockquote>
+<ul>
+<li>处理探针json消息中value字段非字符串的情况。</li>
+</ul>
+</blockquote>
+<hr>
+<h1 class="mume-header" id="v101_20180714_003">v1.0.1_20180714_003</h1>
+
+<hr>
+<h2 class="mume-header" id="v101_20180714_003%E4%B8%8B%E8%BD%BD">v1.0.1_20180714_003下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc_1.0.1_20180714_003.tar.gz">rtc_1.0.1_20180714_003.tar.gz</a></td>
+<td>629f453af00a6595fba3671dc8a6ee7b5d510709572a6cf5372dd5f026b8d3c7</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc_1.0.1_20180714_003_releasenotes.html">rtc_1.0.1_20180714_003_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v101_20180714_003%E4%BF%A1%E6%81%AF">v1.0.1_20180714_003信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年7月14日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： 1，针对重庆探针异常消息进行修正</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-1">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD-1">新功能</h3>
+
+<blockquote>
+<ul>
+<li>None</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98-1">改变</h3>
+
+<blockquote>
+<ul>
+<li>1，针对重庆探针异常消息进行修正
+<ul>
+<li>删除除探针消息中的换行符</li>
+<li>删除探针消息中json的value中的逗号</li>
+<li>如果探针消息中json的value中包含<code>function Object()</code>，将value置为空字符串。</li>
+<li>如果探针消息中json的value中包含<code>[native code]</code>，将value置为空字符串。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h1 class="mume-header" id="v101_20180702_002">v1.0.1_20180702_002</h1>
+
+<hr>
+<h2 class="mume-header" id="v101_20180702_002%E4%B8%8B%E8%BD%BD">v1.0.1_20180702_002下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc_1.0.1_20180702_002.tar.gz">rtc_1.0.1_20180702_002.tar.gz</a></td>
+<td>13d0cab1a597db16162164803709661d310158c6d72c2a57fbd2423c4a43116a</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc_1.0.1_20180702_002_releasenotes.html">rtc_1.0.1_20180702_002_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v101_20180702_002%E4%BF%A1%E6%81%AF">v1.0.1_20180702_002信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年7月2日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： 1,修复探针消息data处理之后没有返回处理过的data的bug；<br>
+2，支持南传探针heartbeat消息。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-2">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD-2">新功能</h3>
+
+<blockquote>
+<ul>
+<li>支持南传探针heartbeat消息/?opt=get&amp;name=epglog1。以前flume返回500，现在rtc返回200 OK。</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98-2">改变</h3>
+
+<blockquote>
+<ul>
+<li>None</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="mr">MR</h2>
+
+<h3 class="mume-header" id="%E4%BF%AE%E5%A4%8D%E7%9A%84mr">修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+<th>修复的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>探针消息data处理之后没有返回处理过的data，相当于把原始的data消息送给了sparkstreaming。</td>
+<td>1.0.1_20180619_001</td>
+<td>1.0.1_20180702_002</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr">未修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 class="mume-header" id="v101_20180619_001">v1.0.1_20180619_001</h1>
+
+<hr>
+<h2 class="mume-header" id="v101_20180619_001%E4%B8%8B%E8%BD%BD">v1.0.1_20180619_001下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc.1.0.1_20180619_001.tar.gz">rtc.1.0.1_20180619_001.tar.gz</a></td>
+<td>7a8e48768f628dc9f5be163db5c2b446404ad5e7d814326b35cc4eaa6e439422</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc.1.0.1_20180619_001_releasenotes.html">rtc.1.0.1_20180619_001_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v101_20180619_001%E4%BF%A1%E6%81%AF">v1.0.1_20180619_001信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年6月19日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： 支持设置开关打印探针请求uri和处理完成的探针消息内容</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-3">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD-3">新功能</h3>
+
+<blockquote>
+<ul>
+<li>添加配置项，支持设置开关打印探针请求uri和处理完成的探针消息内容。</li>
+<li>支持动态设置是否打印探针请求uri和处理完成的探针消息内容。</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98-3">改变</h3>
+
+<blockquote>
+<ul>
+<li>setEnv.sh中ulimit -n的值由32768修改为1048576。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="source-code">Source Code</h2>
+
+<blockquote>
+<ul>
+<li>说明：编译安装结构跟v1.0.0版本一样，多了一个tool工具脚本目录。</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="code%E7%BB%93%E6%9E%84">Code结构</h3>
+
+<pre data-role="codeBlock" data-info="" class="language-"><code>rtc                       		&#x4E3B;&#x76EE;&#x5F55;
+&#x2502;  build.bat                    windows&#x7F16;&#x8BD1;&#x811A;&#x672C;
+&#x2502;  build.sh                     linux&#x7F16;&#x8BD1;&#x811A;&#x672C;
+&#x2502;  rtc_releasenotes.md    		releasenotes
+&#x2502;  pom.xml                      maven&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+&#x251C;&#x2500;src                           source&#x76EE;&#x5F55;
+&#x2502;  &#x251C;&#x2500;dev                        source&#x5F00;&#x53D1;&#x76EE;&#x5F55;&#xFF0C;&#x5F00;&#x53D1;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;&#x3002;
+&#x2502;  &#x251C;&#x2500;main                       source&#x4E3B;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;assembly                maven &#x63D2;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;bin                     &#x542F;&#x52A8;&#x3001;&#x505C;&#x6B62;&#x7B49;&#x811A;&#x672C;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;config                  &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;java                    java&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;tool                    rtc&#x5DE5;&#x5177;&#x811A;&#x672C;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x2514;&#x2500;resources               spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2514;&#x2500;test                       junit&#x6D4B;&#x8BD5;&#x76EE;&#x5F55;
+</code></pre><hr>
+<h2 class="mume-header" id="%E5%AE%89%E8%A3%85">安装</h2>
+
+<blockquote>
+<ul>
+<li>安装步骤跟V1.0.0一致，主要是配置文件rtc.yml加了打印开关的两个配置项rtc.collect.is-print.uri和rtc.collect.is-print.handled-data。一般情况下建议都设置为false，需要的时候通过工具脚本setPrintSwitch.py按需打开，用完之后再关闭。</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E9%85%8D%E7%BD%AErtc">配置rtc</h3>
+
+<h4 class="mume-header" id="rtcyml">rtc.yml</h4>
+
+<p>  配置rtc.yml主要是4个部分。</p>
+<blockquote>
+<ul>
+<li>rtc.http.server.address					rtc监听地址，如果是0.0.0.0则监听服务器所有ip地址</li>
+<li>rtc.http.server.port						rtc监听端口</li>
+<li>spring.kafka.bootstrap-servers			kafka服务器列表，以逗号分隔。例：10.50.108.10:19092,10.50.108.20:19092,10.50.108.16:19092</li>
+<li>spring.kafka.rtc.topic.num-partitions	实时采集topic sparkStreaming1的分区数，一定要跟实际分区数一模一样。</li>
+<li>rtc.collect.is-print.uri					是否打印请求uri</li>
+<li>rtc.collect.is-print.handled-data		是否打印处理完成的探针消息</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token comment"># vi rtc.yml</span>
+
+<span class="token comment">#spring boot properties</span>
+<span class="token comment">#http://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#common-application-properties</span>
+
+<span class="token key atrule">rtc</span><span class="token punctuation">:</span>
+  <span class="token key atrule">collect</span><span class="token punctuation">:</span>
+    <span class="token key atrule">statistics</span><span class="token punctuation">:</span>
+      <span class="token key atrule">task</span><span class="token punctuation">:</span>
+        <span class="token key atrule">print-delay-seconds</span><span class="token punctuation">:</span> <span class="token number">2 </span><span class="token comment"># 打印输出延迟秒数</span>
+        <span class="token key atrule">cron-expression</span><span class="token punctuation">:</span> 0/1 * * * * <span class="token punctuation">?</span> <span class="token comment"># 打印输出统计频率，默认每秒1次</span>
+    <span class="token key atrule">is-print</span><span class="token punctuation">:</span>
+      <span class="token key atrule">uri</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment"># 是否在INFO日志中打印探针发送的请求URI</span>
+      <span class="token key atrule">handled-data</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment"># 是否在INFO日志中打印处理完成的探针数据</span>
+  <span class="token key atrule">http</span><span class="token punctuation">:</span>
+    <span class="token key atrule">server</span><span class="token punctuation">:</span>
+      <span class="token comment"># rtc监听IP，0.0.0.0 表示监听所有网卡端口</span>
+      <span class="token key atrule">address</span><span class="token punctuation">:</span> 0.0.0.0
+      <span class="token comment"># rtc监听端口</span>
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8082</span>
+      <span class="token key atrule">loglevel</span><span class="token punctuation">:</span> INFO <span class="token comment"># rtc使用的netty框架日志级别，不用修改。</span>
+      <span class="token key atrule">thread</span><span class="token punctuation">:</span>
+          <span class="token key atrule">numbers</span><span class="token punctuation">:</span>
+            <span class="token key atrule">bossGroup</span><span class="token punctuation">:</span> <span class="token number">1 </span><span class="token comment"># the parent (acceptor) specified number of threads</span>
+            <span class="token key atrule">workerGroup</span><span class="token punctuation">:</span> <span class="token number">16 </span><span class="token comment"># the child (client) specified number of threads</span>
+      <span class="token key atrule">channelOption</span><span class="token punctuation">:</span>
+        <span class="token key atrule">soBacklog</span><span class="token punctuation">:</span> <span class="token number">1024 </span><span class="token comment"># linux SO_BACKLOG</span>
+        <span class="token key atrule">connectTimeoutMills</span><span class="token punctuation">:</span> <span class="token number">3000 </span><span class="token comment"># 连接超时时间（单位：毫秒）</span>
+      <span class="token key atrule">channelInitializer</span><span class="token punctuation">:</span>
+        <span class="token key atrule">eventExecutorGroup</span><span class="token punctuation">:</span>
+          <span class="token key atrule">thread</span><span class="token punctuation">:</span>
+            <span class="token key atrule">numbers</span><span class="token punctuation">:</span> <span class="token number">256 </span><span class="token comment"># execute the {@link ChannelHandler} methods specified number of threads</span>
+        <span class="token key atrule">readTimeoutHandler</span><span class="token punctuation">:</span>
+          <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">180 </span><span class="token comment"># read timeout in seconds</span>
+        <span class="token key atrule">httpObjectAggregator</span><span class="token punctuation">:</span>
+          <span class="token key atrule">maxContentLength</span><span class="token punctuation">:</span> <span class="token number">1048576 </span><span class="token comment"># the maximum length of the aggregated content in bytes.</span>
+  <span class="token key atrule">task</span><span class="token punctuation">:</span>
+    <span class="token key atrule">scheduler</span><span class="token punctuation">:</span>
+      <span class="token key atrule">pool-size</span><span class="token punctuation">:</span> <span class="token number">10 </span><span class="token comment"># ThreadPoolTaskScheduler pool size </span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">kafka</span><span class="token punctuation">:</span>
+    <span class="token comment"># Comma-delimited list of host:port pairs to use for establishing the initial connection to the Kafka cluster.</span>
+    <span class="token key atrule">bootstrap-servers</span><span class="token punctuation">:</span> 10.50.108.10<span class="token punctuation">:</span><span class="token number">19092</span><span class="token punctuation">,</span>10.50.108.20<span class="token punctuation">:</span><span class="token number">19092</span><span class="token punctuation">,</span>10.50.108.16<span class="token punctuation">:</span><span class="token number">19092</span>
+    <span class="token key atrule">producer</span><span class="token punctuation">:</span>
+      <span class="token key atrule">batch-size</span><span class="token punctuation">:</span> <span class="token number">256 </span><span class="token comment"># Default batch size in bytes.</span>
+      <span class="token key atrule">retries</span><span class="token punctuation">:</span> <span class="token number">3 </span><span class="token comment"># When greater than zero, enables retrying of failed sends.</span>
+    <span class="token key atrule">listener</span><span class="token punctuation">:</span>
+      <span class="token key atrule">concurrency</span><span class="token punctuation">:</span> <span class="token number">3 </span><span class="token comment"># Number of threads to run in the listener containers.</span>
+    <span class="token key atrule">template</span><span class="token punctuation">:</span>
+      <span class="token key atrule">default-topic</span><span class="token punctuation">:</span> rtc<span class="token punctuation">-</span>default <span class="token comment"># Default topic to which messages will be sent.</span>
+    <span class="token key atrule">topic</span><span class="token punctuation">:</span>
+      <span class="token key atrule">rtc</span><span class="token punctuation">:</span>
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> sparkStreaming1 <span class="token comment"># spark streaming实时采集kafka topic</span>
+        <span class="token key atrule">num-partitions</span><span class="token punctuation">:</span> <span class="token number">12 </span><span class="token comment"># spark streaming实时采集kafka 分区数量，应该跟在kafka中创建的分区数一致。</span>
+        <span class="token key atrule">replication-factor</span><span class="token punctuation">:</span> <span class="token number">2 </span><span class="token comment"># spark streaming实时采集kafka 分区复制份数，暂时没有用到。</span>
+</pre><hr>
+<h2 class="mume-header" id="%E5%8D%87%E7%BA%A7">升级</h2>
+
+<h3 class="mume-header" id="from-v100">From v1.0.0</h3>
+
+<blockquote>
+<ul>
+<li>备份原有目录，直接全新安装。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E5%B7%A5%E5%85%B7">工具</h2>
+
+<h3 class="mume-header" id="setprintswitchpy"><a href="http://setPrintSwitch.py">setPrintSwitch.py</a></h3>
+
+<blockquote>
+<ul>
+<li>setPrintSwitch.py工具脚本支持动态设置打印探针请求uri和处理完成的探针消息内容。</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#help</span>
+$ <span class="token function">cd</span> /opt/spark/rtc/tool/
+$ ./setPrintSwitch.py 
+2018-06-19 17:07:58,801 MainThread INFO  setPrintSwitch start to run <span class="token punctuation">..</span>.
+2018-06-19 17:07:58,801 MainThread INFO  please input the correct parameters:
+                               isPrintUri    - whether is print requested uri? <span class="token boolean">true</span> or <span class="token boolean">false</span>
+                               isPrintData   - whether is print collected data? <span class="token boolean">true</span> or <span class="token boolean">false</span>
+<span class="token comment"># 设置打印请求的uri</span>
+./setPrintSwitch.py <span class="token boolean">true</span> <span class="token boolean">false</span>
+<span class="token comment"># 设置打印处理完成的探针消息内容</span>
+./setPrintSwitch.py <span class="token boolean">false</span> <span class="token boolean">true</span>
+<span class="token comment"># 关闭打印</span>
+./setPrintSwitch.py <span class="token boolean">false</span> <span class="token boolean">false</span>
+</pre><hr>
+<h1 class="mume-header" id="v100_20180615_003">v1.0.0_20180615_003</h1>
+
+<hr>
+<h2 class="mume-header" id="v100_20180615_003%E4%B8%8B%E8%BD%BD">v1.0.0_20180615_003下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc.1.0.0_20180615_003.tar.gz">rtc.1.0.0_20180615_003.tar.gz</a></td>
+<td>b56f99cf7f998200c4b9989bbf9b68799c966a7bf1ae03432bdd49483f4f0ea6</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc.1.0.0_20180615_003_releasenotes.html">rtc.1.0.0_20180615_003_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v100_20180615_003%E4%BF%A1%E6%81%AF">v1.0.0_20180615_003信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年6月15日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： MR: 重庆BI探针1.0消息需要在responsbody中回复PUT_OK</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="mr-1">MR</h2>
+
+<h3 class="mume-header" id="%E4%BF%AE%E5%A4%8D%E7%9A%84mr-1">修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+<th>修复的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>重庆BI探针1.0消息，原来的bto + httpsqs会<br>返回PUT_OK。因此rtc需要兼容原来的实现。</td>
+<td>1.0.0_20180613_002</td>
+<td>1.0.0_20180615_003</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr-1">未修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 class="mume-header" id="v100_20180613_002">v1.0.0_20180613_002</h1>
+
+<hr>
+<h2 class="mume-header" id="v100_20180613_002%E4%B8%8B%E8%BD%BD">v1.0.0_20180613_002下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc.1.0.0_20180613_002.tar.gz">rtc.1.0.0_20180613_002.tar.gz</a></td>
+<td>2a0a39517a06a3adbcd1b2d5b98b21badff0fb67e5631612b27518737458f3b0</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc.1.0.0_20180613_002_releasenotes.html">rtc.1.0.0_20180613_002_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v100_20180613_002%E4%BF%A1%E6%81%AF">v1.0.0_20180613_002信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年6月13日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： 兼容探针1.0 Version</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-4">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD-4">新功能</h3>
+
+<blockquote>
+<ul>
+<li>兼容探针1.0 Version。主要是探针发送的消息URI中缺少user_id字段。</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98-4">改变</h3>
+
+<blockquote>
+<ul>
+<li>优化日志打印。</li>
+</ul>
+</blockquote>
+<hr>
+<h1 class="mume-header" id="v100_20180611_001">v1.0.0_20180611_001</h1>
+
+<hr>
+<h2 class="mume-header" id="v100_20180611_001%E4%B8%8B%E8%BD%BD">v1.0.0_20180611_001下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>sha256 hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/BI/platform/2.7.2/package/RTC/rtc.1.0.0_20180611_001.tar.gz">rtc.1.0.0_20180611_001.tar.gz</a></td>
+<td>3edb20907ef0402050bc427acb0d32f4d8633f0145eac94edccad963a7829ec2</td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/doc/releaseNotes/rtc.1.0.0_20180611_001_releasenotes.html">rtc.1.0.0_20180611_001_releasenotes.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://172.19.64.100:9999/release/common/JDK/jdk-8u74-linux-x64.tar.gz">jdk-8u74-linux-x64.tar.gz</a></td>
+<td>0bfd5d79f776d448efc64cb47075a52618ef76aabb31fde21c5c1018683cdddd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="v100_20180611_001%E4%BF%A1%E6%81%AF">v1.0.0_20180611_001信息</h2>
+
+<blockquote>
+<ul>
+<li>Author:<a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Release Date：2018年6月11日</li>
+<li>Reviewed By: <a href="tommy.zhao@utstarcom.cn">Tommy Zhao</a></li>
+<li>Description Of Change： First release</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="references">References</h2>
+
+<blockquote>
+<ul>
+<li>EPG日志采集探针接口_V3.12_20180510.doc</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="%E6%A6%82%E8%BF%B0">概述</h2>
+
+<p> BI的数据采集模块，原来用的flume 1.6加上自定义httpsource来实现接收数据，写入kafka。这种方式出现问题比较难于定位，而且出包什么的也很不方便，flume 1.6已经是一个很老的版本了，也很难升级。目前在安徽BI现场就出现了flume往kafka写数据失败的问题，但是完全定位不到。因此决定用Spring Boot + Netty + Spring Kafka重新实现这个功能，除了解决原有的问题，使用Netty之后，性能也能够随之大幅提升。</p>
+<hr>
+<h2 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-5">主要更新</h2>
+
+<h3 class="mume-header" id="%E6%96%B0%E5%8A%9F%E8%83%BD-5">新功能</h3>
+
+<blockquote>
+<ul>
+<li>替换原有BI的数据采集模块，即flume 1.6加上自定义httpsource来实现接收数据，写入kafka。</li>
+<li>匹配的kafka版本： kafka_2.10-0.8.2.1</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="%E6%94%B9%E5%8F%98-5">改变</h3>
+
+<blockquote>
+<ul>
+<li>首次出包，不涉及。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="mr-2">MR</h2>
+
+<h3 class="mume-header" id="%E4%BF%AE%E5%A4%8D%E7%9A%84mr-2">修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+<th>修复的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr-2">未修复的MR</h3>
+
+<table>
+<thead>
+<tr>
+<th>MR Num</th>
+<th>描述</th>
+<th>发现的版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="source-code-1">Source Code</h2>
+
+<h3 class="mume-header" id="code%E7%BB%93%E6%9E%84-1">Code结构</h3>
+
+<pre data-role="codeBlock" data-info="" class="language-"><code>rtc                       		&#x4E3B;&#x76EE;&#x5F55;
+&#x2502;  build.bat                    windows&#x7F16;&#x8BD1;&#x811A;&#x672C;
+&#x2502;  build.sh                     linux&#x7F16;&#x8BD1;&#x811A;&#x672C;
+&#x2502;  rtc_releasenotes.md    		releasenotes
+&#x2502;  pom.xml                      maven&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+&#x251C;&#x2500;src                           source&#x76EE;&#x5F55;
+&#x2502;  &#x251C;&#x2500;dev                        source&#x5F00;&#x53D1;&#x76EE;&#x5F55;&#xFF0C;&#x5F00;&#x53D1;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;&#x3002;
+&#x2502;  &#x251C;&#x2500;main                       source&#x4E3B;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;assembly                maven &#x63D2;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;bin                     &#x542F;&#x52A8;&#x3001;&#x505C;&#x6B62;&#x7B49;&#x811A;&#x672C;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;config                  &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x251C;&#x2500;java                    java&#x6E90;&#x4EE3;&#x7801;&#x76EE;&#x5F55;
+&#x2502;  &#x2502;  &#x2514;&#x2500;resources               spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+&#x2502;  &#x2514;&#x2500;test                       junit&#x6D4B;&#x8BD5;&#x76EE;&#x5F55;
+</code></pre><hr>
+<h3 class="mume-header" id="%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83">编译环境</h3>
+
+<ul>
+<li>
+<p>编译环境要求：</p>
+<blockquote>
+<ul>
+<li>Windows 7或Centos6.8-x86_64</li>
+<li>JDK-8u74及以上</li>
+<li>Apache Maven 3.3.9及以上</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>编译</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#windows</span>
+<span class="token function">cd</span> rtc.git\rtc
+build.bat
+<span class="token comment">#linux</span>
+<span class="token function">cd</span> rtc.git/rtc
+<span class="token function">chmod</span> u+x build.sh
+./build.sh
+</pre><ul>
+<li>
+<p>安装包</p>
+<p> 编译完成后，安装包位于rtc.git/rtc/target目录。</p>
+</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E5%AE%89%E8%A3%85-1">安装</h2>
+
+<h3 class="mume-header" id="%E5%AE%89%E8%A3%85jdk">安装JDK</h3>
+
+<blockquote>
+<ul>
+<li>如果服务器上已经安装了JDK 8，则这一步可以跳过</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#copy jdk-8u74-linux-x64.tar.gz to the server, unpack it</span>
+<span class="token function">su</span> - spark
+<span class="token function">tar</span> xf jdk-8u74-linux-x64.tar.gz -C /opt/spark/app/
+</pre><h3 class="mume-header" id="%E5%AE%89%E8%A3%85rtc">安装rtc</h3>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#copy tar xf rtc.LINUX64.MES_1.0.0_20180611_001.tar.gz to the server, unpack it</span>
+<span class="token function">su</span> - spark
+<span class="token function">tar</span> xf rtc.1.0.0_20180611_001.tar.gz -C /opt/spark/
+chow -R spark:hadoopgroup /opt/spark/rtc
+</pre><h3 class="mume-header" id="%E9%85%8D%E7%BD%AErtc-1">配置rtc</h3>
+
+<p>  rtc主要有三个配置文件：</p>
+<blockquote>
+<ul>
+<li><a href="http://setEnv.sh">setEnv.sh</a>	设置JAVA_HOME</li>
+<li>rtc.yml		rtc的基本配置</li>
+<li>logback.xml	日志配置文件</li>
+</ul>
+</blockquote>
+<h4 class="mume-header" id="setenvsh"><a href="http://setEnv.sh">setEnv.sh</a></h4>
+
+<blockquote>
+<ul>
+<li>JAVA_HOME	设置JAVA实际位置</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#vi setEnv.sh</span>
+
+<span class="token comment">#set JAVA_HOME</span>
+JAVA_HOME<span class="token operator">=</span>/usr/local/jdk1.8.0_74
+<span class="token function">export</span> JAVA_HOME
+JAVA<span class="token operator">=</span><span class="token string">"<span class="token variable">$JAVA_HOME</span>"</span>/bin/java
+
+</pre><h4 class="mume-header" id="rtcyml-1">rtc.yml</h4>
+
+<p>  配置rtc.yml主要是4个部分。</p>
+<blockquote>
+<ul>
+<li>rtc.http.server.address					rtc监听地址，如果是0.0.0.0则监听服务器所有ip地址</li>
+<li>rtc.http.server.port						rtc监听端口</li>
+<li>spring.kafka.bootstrap-servers			kafka服务器列表，以逗号分隔。例：10.50.108.10:19092,10.50.108.20:19092,10.50.108.16:19092</li>
+<li>spring.kafka.rtc.topic.num-partitions	实时采集topic sparkStreaming1的分区数，一定要跟实际分区数一模一样。</li>
+</ul>
+</blockquote>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token comment"># vi rtc.yml</span>
+
+<span class="token comment">#spring boot properties</span>
+<span class="token comment">#http://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#common-application-properties</span>
+
+<span class="token key atrule">rtc</span><span class="token punctuation">:</span>
+  <span class="token key atrule">collect</span><span class="token punctuation">:</span>
+    <span class="token key atrule">statistics</span><span class="token punctuation">:</span>
+      <span class="token key atrule">task</span><span class="token punctuation">:</span>
+        <span class="token key atrule">print-delay-seconds</span><span class="token punctuation">:</span> <span class="token number">2 </span><span class="token comment"># 打印输出延迟秒数</span>
+        <span class="token key atrule">cron-expression</span><span class="token punctuation">:</span> 0/1 * * * * <span class="token punctuation">?</span> <span class="token comment"># 打印输出统计频率，默认每秒1次</span>
+  <span class="token key atrule">http</span><span class="token punctuation">:</span>
+    <span class="token key atrule">server</span><span class="token punctuation">:</span>
+      <span class="token key atrule">address</span><span class="token punctuation">:</span> 0.0.0.0
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8082</span>
+      <span class="token key atrule">loglevel</span><span class="token punctuation">:</span> INFO
+      <span class="token key atrule">thread</span><span class="token punctuation">:</span>
+          <span class="token key atrule">numbers</span><span class="token punctuation">:</span>
+            <span class="token key atrule">bossGroup</span><span class="token punctuation">:</span> <span class="token number">1</span>
+            <span class="token key atrule">workerGroup</span><span class="token punctuation">:</span> <span class="token number">16</span>
+      <span class="token key atrule">channelOption</span><span class="token punctuation">:</span>
+        <span class="token key atrule">soBacklog</span><span class="token punctuation">:</span> <span class="token number">1024</span>
+        <span class="token key atrule">connectTimeoutMills</span><span class="token punctuation">:</span> <span class="token number">3000</span>
+      <span class="token key atrule">channelInitializer</span><span class="token punctuation">:</span>
+        <span class="token key atrule">eventExecutorGroup</span><span class="token punctuation">:</span>
+          <span class="token key atrule">thread</span><span class="token punctuation">:</span>
+            <span class="token key atrule">numbers</span><span class="token punctuation">:</span> <span class="token number">256</span>
+        <span class="token key atrule">readTimeoutHandler</span><span class="token punctuation">:</span>
+          <span class="token key atrule">timeoutSeconds</span><span class="token punctuation">:</span> <span class="token number">360</span>
+        <span class="token key atrule">httpObjectAggregator</span><span class="token punctuation">:</span>
+          <span class="token key atrule">maxContentLength</span><span class="token punctuation">:</span> <span class="token number">1048576</span>
+  <span class="token key atrule">task</span><span class="token punctuation">:</span>
+    <span class="token key atrule">scheduler</span><span class="token punctuation">:</span>
+      <span class="token key atrule">pool-size</span><span class="token punctuation">:</span> <span class="token number">10 </span><span class="token comment"># ThreadPoolTaskScheduler pool size </span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">kafka</span><span class="token punctuation">:</span>
+    <span class="token key atrule">bootstrap-servers</span><span class="token punctuation">:</span> 10.50.108.10<span class="token punctuation">:</span><span class="token number">19092</span><span class="token punctuation">,</span>10.50.108.20<span class="token punctuation">:</span><span class="token number">19092</span><span class="token punctuation">,</span>10.50.108.16<span class="token punctuation">:</span><span class="token number">19092</span>
+    <span class="token key atrule">producer</span><span class="token punctuation">:</span>
+      <span class="token key atrule">batch-size</span><span class="token punctuation">:</span> <span class="token number">100</span>
+      <span class="token key atrule">retries</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">listener</span><span class="token punctuation">:</span>
+      <span class="token key atrule">concurrency</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">template</span><span class="token punctuation">:</span>
+      <span class="token key atrule">default-topic</span><span class="token punctuation">:</span> filetest
+    <span class="token key atrule">topic</span><span class="token punctuation">:</span>
+      <span class="token key atrule">rtc</span><span class="token punctuation">:</span>
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> sparkStreaming1
+        <span class="token key atrule">num-partitions</span><span class="token punctuation">:</span> <span class="token number">12</span>
+        <span class="token key atrule">replication-factor</span><span class="token punctuation">:</span> <span class="token number">2</span>
+</pre><h4 class="mume-header" id="logbackxml">logback.xml</h4>
+
+<p>  日志配置文件logback.xml一般不用修改。</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token attr-name">scan</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">scanPeriod</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>600 seconds<span class="token punctuation">"</span></span> <span class="token attr-name">debug</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>log_dir<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logs<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>maxHistory<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>720<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token comment">&lt;!-- unit: hour --></span>
+
+	<span class="token comment">&lt;!-- LEVEL: ERROR --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logError<span class="token punctuation">"</span></span>
+		<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.RollingFileAppender<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">></span></span>${log_dir}/rtc_error.log<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.classic.filter.LevelFilter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>level</span><span class="token punctuation">></span></span>ERROR<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>level</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMatch</span><span class="token punctuation">></span></span>ACCEPT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMatch</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMismatch</span><span class="token punctuation">></span></span>DENY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMismatch</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rollingPolicy</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.TimeBasedRollingPolicy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fileNamePattern</span><span class="token punctuation">></span></span>${log_dir}/rtc_error.log.%d{yyyy-MM-dd-HH}.%i
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fileNamePattern</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxHistory</span><span class="token punctuation">></span></span>${maxHistory}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxHistory</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timeBasedFileNamingAndTriggeringPolicy</span>
+				<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxFileSize</span><span class="token punctuation">></span></span>10MB<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxFileSize</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>timeBasedFileNamingAndTriggeringPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rollingPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>encoder</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">></span></span>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] [%c] - %m%n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pattern</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>encoder</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>appender</span><span class="token punctuation">></span></span>
+
+	<span class="token comment">&lt;!-- LEVEL: WARN --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logWarn<span class="token punctuation">"</span></span>
+		<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.RollingFileAppender<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">></span></span>${log_dir}/rtc_warn.log<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.classic.filter.LevelFilter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>level</span><span class="token punctuation">></span></span>WARN<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>level</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMatch</span><span class="token punctuation">></span></span>ACCEPT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMatch</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMismatch</span><span class="token punctuation">></span></span>DENY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMismatch</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rollingPolicy</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.TimeBasedRollingPolicy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fileNamePattern</span><span class="token punctuation">></span></span>${log_dir}/rtc_warn.log.%d{yyyy-MM-dd-HH}.%i
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fileNamePattern</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxHistory</span><span class="token punctuation">></span></span>${maxHistory}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxHistory</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timeBasedFileNamingAndTriggeringPolicy</span>
+				<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxFileSize</span><span class="token punctuation">></span></span>10MB<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxFileSize</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>timeBasedFileNamingAndTriggeringPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rollingPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>encoder</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">></span></span>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] [%c] - %m%n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pattern</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>encoder</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>appender</span><span class="token punctuation">></span></span>
+
+	<span class="token comment">&lt;!-- LEVEL: INFO --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logInfo<span class="token punctuation">"</span></span>
+		<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.RollingFileAppender<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">></span></span>${log_dir}/rtc.log<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.classic.filter.LevelFilter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>level</span><span class="token punctuation">></span></span>INFO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>level</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMatch</span><span class="token punctuation">></span></span>ACCEPT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMatch</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMismatch</span><span class="token punctuation">></span></span>DENY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMismatch</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rollingPolicy</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.TimeBasedRollingPolicy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fileNamePattern</span><span class="token punctuation">></span></span>${log_dir}/rtc.log.%d{yyyy-MM-dd-HH}.%i
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fileNamePattern</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxHistory</span><span class="token punctuation">></span></span>${maxHistory}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxHistory</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timeBasedFileNamingAndTriggeringPolicy</span>
+				<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxFileSize</span><span class="token punctuation">></span></span>10MB<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxFileSize</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>timeBasedFileNamingAndTriggeringPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rollingPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>encoder</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">></span></span>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] - %m%n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pattern</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>encoder</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>appender</span><span class="token punctuation">></span></span>
+
+	<span class="token comment">&lt;!-- LEVEL: DEBUG --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logDebug<span class="token punctuation">"</span></span>
+		<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.RollingFileAppender<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">></span></span>${log_dir}/rtc_debug.log<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.classic.filter.LevelFilter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>level</span><span class="token punctuation">></span></span>DEBUG<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>level</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMatch</span><span class="token punctuation">></span></span>ACCEPT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMatch</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onMismatch</span><span class="token punctuation">></span></span>DENY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>onMismatch</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rollingPolicy</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.TimeBasedRollingPolicy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fileNamePattern</span><span class="token punctuation">></span></span>${log_dir}/rtc_debug.log.%d{yyyy-MM-dd-HH}.%i
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fileNamePattern</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxHistory</span><span class="token punctuation">></span></span>${maxHistory}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxHistory</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cleanHistoryOnStart</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timeBasedFileNamingAndTriggeringPolicy</span>
+				<span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maxFileSize</span><span class="token punctuation">></span></span>10MB<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maxFileSize</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>timeBasedFileNamingAndTriggeringPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rollingPolicy</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>encoder</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">></span></span>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] [%c] - %m%n<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pattern</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>encoder</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>appender</span><span class="token punctuation">></span></span>
+
+	<span class="token comment">&lt;!-- package: cn.utstarcom.rtc --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logger</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cn.utstarcom.rtc<span class="token punctuation">"</span></span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>INFO<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+	<span class="token comment">&lt;!-- package: org.springframework --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logger</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.springframework<span class="token punctuation">"</span></span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>INFO<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+	
+	<span class="token comment">&lt;!-- package: io.netty --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logger</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>io.netty<span class="token punctuation">"</span></span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>INFO<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+    <span class="token comment">&lt;!-- package: org.apache.kafka --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logger</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.apache.kafka<span class="token punctuation">"</span></span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>INFO<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+    <span class="token comment">&lt;!-- package: jboss logging log exception handle --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logger</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>INFO<span class="token punctuation">"</span></span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>WARN<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+
+	<span class="token comment">&lt;!-- root --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span> <span class="token attr-name">level</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DEBUG<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender-ref</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logError<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender-ref</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logWarn<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender-ref</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logInfo<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender-ref</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logDebug<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+</pre><h3 class="mume-header" id="%E5%90%AF%E5%8A%A8">启动</h3>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment">#启动</span>
+<span class="token function">su</span> - spark
+<span class="token function">cd</span> /opt/spark/rtc/bin
+<span class="token function">nohup</span> ./start_rtc.sh <span class="token operator">&amp;</span>
+
+<span class="token comment">#检查</span>
+<span class="token comment"># tail -f nohup.out </span>
+
+20180611-152019 - <span class="token punctuation">[</span>start_rtc.sh<span class="token punctuation">]</span>: start to run rtc.
+20180611-152019 - <span class="token punctuation">[</span>start_rtc.sh<span class="token punctuation">]</span>: run rtc_monitor.py script.
+20180611-152019 - <span class="token punctuation">[</span>start_rtc.sh<span class="token punctuation">]</span>: run rtc main program.
+20180611-152019 - <span class="token punctuation">[</span>start_rtc.sh<span class="token punctuation">]</span>: rtc used memory size: 512M
+15:20:19.805 <span class="token punctuation">[</span>main<span class="token punctuation">]</span> INFO cn.utstarcom.rtc.RtcApplication - the rtc begin to start <span class="token punctuation">..</span><span class="token punctuation">..</span>
+2018-06-11 15:20:20,179 root     INFO  start to run rtc_monitor.
+2018-06-11 15:20:20,179 root     INFO  first, <span class="token function">sleep</span> 300 seconds<span class="token punctuation">..</span>.
+
+  <span class="token keyword">.</span>   ____          _            __ _ _
+ /\\ / ___<span class="token string">'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '</span>_ <span class="token operator">|</span> <span class="token string">'_| | '</span>_ \/ _` <span class="token operator">|</span> \ \ \ \
+ \\/  ___<span class="token punctuation">)</span><span class="token operator">|</span> <span class="token operator">|</span>_<span class="token punctuation">)</span><span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">||</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token operator">|</span>  <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span>
+  '  <span class="token operator">|</span>____<span class="token operator">|</span> .__<span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span>_<span class="token operator">|</span>_<span class="token operator">|</span> <span class="token operator">|</span>_\__, <span class="token operator">|</span> / / / /
+ <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">|</span>_<span class="token operator">|</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">|</span>___/<span class="token operator">=</span>/_/_/_/
+ :: Spring Boot ::       <span class="token punctuation">(</span>v1.5.10.RELEASE<span class="token punctuation">)</span>
+
+2018-06-11 15:20:22,192 - <span class="token punctuation">[</span>HttpServerImpl<span class="token punctuation">]</span>: netty http server bind: http://0.0.0.0:19099 started success<span class="token operator">!</span>
+2018-06-11 15:20:22,325 - <span class="token punctuation">[</span>RtcApplication<span class="token punctuation">]</span>: the rtc start completed. the user dir: /opt/spark/rtc
+</pre><hr>
+<h2 class="mume-header" id="protocol-chart">PROTOCOL CHART</h2>
+
+<table>
+<thead>
+<tr>
+<th>Tcp/Udp</th>
+<th>Protocol Type</th>
+<th>Port# TO:</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP</td>
+<td>HTTP</td>
+<td>8082</td>
+<td>对外提供服务接口。可修改，以现场为准。</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#v101_20180717_004">v1.0.1_20180717_004</a>
+<ul>
+<li><a href="#v101_20180717_004%E4%B8%8B%E8%BD%BD">v1.0.1_20180717_004下载</a></li>
+<li><a href="#v101_20180717_004%E4%BF%A1%E6%81%AF">v1.0.1_20180717_004信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v101_20180714_003">v1.0.1_20180714_003</a>
+<ul>
+<li><a href="#v101_20180714_003%E4%B8%8B%E8%BD%BD">v1.0.1_20180714_003下载</a></li>
+<li><a href="#v101_20180714_003%E4%BF%A1%E6%81%AF">v1.0.1_20180714_003信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-1">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD-1">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98-1">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v101_20180702_002">v1.0.1_20180702_002</a>
+<ul>
+<li><a href="#v101_20180702_002%E4%B8%8B%E8%BD%BD">v1.0.1_20180702_002下载</a></li>
+<li><a href="#v101_20180702_002%E4%BF%A1%E6%81%AF">v1.0.1_20180702_002信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-2">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD-2">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98-2">改变</a></li>
+</ul>
+</li>
+<li><a href="#mr">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr">未修复的MR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v101_20180619_001">v1.0.1_20180619_001</a>
+<ul>
+<li><a href="#v101_20180619_001%E4%B8%8B%E8%BD%BD">v1.0.1_20180619_001下载</a></li>
+<li><a href="#v101_20180619_001%E4%BF%A1%E6%81%AF">v1.0.1_20180619_001信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-3">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD-3">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98-3">改变</a></li>
+</ul>
+</li>
+<li><a href="#source-code">Source Code</a>
+<ul>
+<li><a href="#code%E7%BB%93%E6%9E%84">Code结构</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AErtc">配置rtc</a>
+<ul>
+<li><a href="#rtcyml">rtc.yml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8D%87%E7%BA%A7">升级</a>
+<ul>
+<li><a href="#from-v100">From v1.0.0</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B7%A5%E5%85%B7">工具</a>
+<ul>
+<li><a href="#setprintswitchpy">setPrintSwitch.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v100_20180615_003">v1.0.0_20180615_003</a>
+<ul>
+<li><a href="#v100_20180615_003%E4%B8%8B%E8%BD%BD">v1.0.0_20180615_003下载</a></li>
+<li><a href="#v100_20180615_003%E4%BF%A1%E6%81%AF">v1.0.0_20180615_003信息</a></li>
+<li><a href="#mr-1">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr-1">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr-1">未修复的MR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v100_20180613_002">v1.0.0_20180613_002</a>
+<ul>
+<li><a href="#v100_20180613_002%E4%B8%8B%E8%BD%BD">v1.0.0_20180613_002下载</a></li>
+<li><a href="#v100_20180613_002%E4%BF%A1%E6%81%AF">v1.0.0_20180613_002信息</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-4">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD-4">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98-4">改变</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#v100_20180611_001">v1.0.0_20180611_001</a>
+<ul>
+<li><a href="#v100_20180611_001%E4%B8%8B%E8%BD%BD">v1.0.0_20180611_001下载</a></li>
+<li><a href="#v100_20180611_001%E4%BF%A1%E6%81%AF">v1.0.0_20180611_001信息</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9B%B4%E6%96%B0-5">主要更新</a>
+<ul>
+<li><a href="#%E6%96%B0%E5%8A%9F%E8%83%BD-5">新功能</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98-5">改变</a></li>
+</ul>
+</li>
+<li><a href="#mr-2">MR</a>
+<ul>
+<li><a href="#%E4%BF%AE%E5%A4%8D%E7%9A%84mr-2">修复的MR</a></li>
+<li><a href="#%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84mr-2">未修复的MR</a></li>
+</ul>
+</li>
+<li><a href="#source-code-1">Source Code</a>
+<ul>
+<li><a href="#code%E7%BB%93%E6%9E%84-1">Code结构</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83">编译环境</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85-1">安装</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85jdk">安装JDK</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85rtc">安装rtc</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AErtc-1">配置rtc</a>
+<ul>
+<li><a href="#setenvsh">setEnv.sh</a></li>
+<li><a href="#rtcyml-1">rtc.yml</a></li>
+<li><a href="#logbackxml">logback.xml</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%AF%E5%8A%A8">启动</a></li>
+</ul>
+</li>
+<li><a href="#protocol-chart">PROTOCOL CHART</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>

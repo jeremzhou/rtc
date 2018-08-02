@@ -1,0 +1,54 @@
+#spring boot properties
+#http://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#common-application-properties
+
+rtc:
+  collect:
+    statistics:
+      task:
+        print-delay-seconds: 2 # 打印输出延迟秒数
+        cron-expression: 0/1 * * * * ? # 打印输出统计频率，默认每秒1次
+    is-print:
+      uri: false # 是否在INFO日志中打印探针发送的请求URI
+      handled-data: false # 是否在INFO日志中打印处理完成的探针数据
+  http:
+    server:
+      # rtc监听IP，0.0.0.0 表示监听所有网卡端口
+      address: 0.0.0.0
+      # rtc监听端口
+      port: 8082
+      loglevel: INFO # rtc使用的netty框架日志级别，不用修改。
+      thread:
+          numbers:
+            bossGroup: 1 # the parent (acceptor) specified number of threads
+            workerGroup: 16 # the child (client) specified number of threads
+      channelOption:
+        soBacklog: 1024 # linux SO_BACKLOG
+        connectTimeoutMills: 3000 # 连接超时时间（单位：毫秒）
+      channelInitializer:
+        eventExecutorGroup:
+          thread:
+            numbers: 256 # execute the {@link ChannelHandler} methods specified number of threads
+        readTimeoutHandler:
+          timeoutSeconds: 60 # read timeout in seconds
+        httpObjectAggregator:
+          maxContentLength: 1048576 # the maximum length of the aggregated content in bytes.
+  task:
+    scheduler:
+      pool-size: 10 # ThreadPoolTaskScheduler pool size 
+
+spring:
+  kafka:
+    # Comma-delimited list of host:port pairs to use for establishing the initial connection to the Kafka cluster.
+    bootstrap-servers: 10.50.108.10:19092,10.50.108.20:19092,10.50.108.16:19092
+    producer:
+      batch-size: 200 # Default batch size in bytes.
+      retries: 3 # When greater than zero, enables retrying of failed sends.
+    listener:
+      concurrency: 3 # Number of threads to run in the listener containers.
+    template:
+      default-topic: rtc-default # Default topic to which messages will be sent.
+    topic:
+      rtc:
+        name: sparkStreaming1 # spark streaming实时采集kafka topic
+        num-partitions: 12 # spark streaming实时采集kafka 分区数量，应该跟在kafka中创建的分区数一致。
+        replication-factor: 2 # spark streaming实时采集kafka 分区复制份数，暂时没有用到。

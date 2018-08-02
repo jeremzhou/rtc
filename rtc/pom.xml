@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.utstarcom</groupId>
+	<artifactId>rtc</artifactId>
+	<version>1.0.2</version>
+	<packaging>jar</packaging>
+	<name>rtc</name>
+	<description>utstarcom rtc</description>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<!-- version properties -->
+		<product.name>BI</product.name>
+		<product.load>6.0.3</product.load>
+
+		<!-- dependency version -->
+		<netty-version>4.1.18.Final</netty-version>
+		<spring-kafka-version>1.0.6.RELEASE</spring-kafka-version>
+		<kafka-client-version>0.8.2.1</kafka-client-version>
+		<icu4j-version>61.1</icu4j-version>
+
+		<!-- plugins version -->
+		<maven-clean-plugin-version>3.0.0</maven-clean-plugin-version>
+		<maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
+		<maven-dependency-plugin-version>3.0.1</maven-dependency-plugin-version>
+		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
+		<maven-assembly-plugin-version>2.6</maven-assembly-plugin-version>
+		<exec-maven-plugin-version>1.6.0</exec-maven-plugin-version>
+		<build-helper-maven-plugin>3.0.0</build-helper-maven-plugin>
+
+		<!-- exec copy releaseNotes -->
+		<copyReleaseNotes.bat>${basedir}/src/main/assembly/copyReleaseNotes.bat</copyReleaseNotes.bat>
+		<copyReleaseNotes.sh>${basedir}/src/main/assembly/copyReleaseNotes.sh</copyReleaseNotes.sh>
+		<srcReleaseNotes>${basedir}/${project.artifactId.uppercase}_ReleaseNotes.doc</srcReleaseNotes>
+		<dstReleaseNotes>${project.build.directory}/${project.build.finalName}_ReleaseNotes.doc</dstReleaseNotes>
+		<srcUnitTestReports>${basedir}/${project.artifactId.uppercase}_UnitTestReports.doc</srcUnitTestReports>
+		<dstUnitTestReports>${project.build.directory}/${project.build.finalName}_单元测试和联调报告.doc</dstUnitTestReports>
+
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<properties>
+				<copyReleaseNotes>${copyReleaseNotes.bat}</copyReleaseNotes>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>linux</id>
+			<properties>
+				<copyReleaseNotes>${copyReleaseNotes.sh}</copyReleaseNotes>
+			</properties>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>${spring-kafka-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka-client-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<!-- netty framework -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-codec-http</artifactId>
+			<version>${netty-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-handler</artifactId>
+			<version>${netty-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-transport-native-epoll -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-transport-native-epoll</artifactId>
+			<version>${netty-version}</version>
+			<classifier>linux-x86_64</classifier>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.ibm.icu/icu4j -->
+		<dependency>
+			<groupId>com.ibm.icu</groupId>
+			<artifactId>icu4j</artifactId>
+			<version>${icu4j-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>${product.name}${product.load}_${project.artifactId.uppercase}_${project.version}</finalName>
+		<plugins>
+			<!-- <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+				</plugin> -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven-clean-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>auto-clean</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>${build-helper-maven-plugin}</version>
+				<executions>
+					<execution>
+						<id>properties-to-uppercase</id>
+						<goals>
+							<goal>regex-property</goal>
+						</goals>
+						<configuration>
+							<name>project.artifactId.uppercase</name>
+							<regex>.*</regex>
+							<value>${project.artifactId}</value>
+							<replacement>$0</replacement>
+							<failIfNoMatch>true</failIfNoMatch>
+							<toUpperCase>true</toUpperCase>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${maven-dependency-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${maven-resources-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/classes/com/utstarcom/nettyexample</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/java/com/utstarcom/nettyexample</directory>
+									<includes>
+										<include>*.xml</include>
+										<include>*.yml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven-assembly-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${exec-maven-plugin-version}</version><!--$NO-MVN-MAN-VER$ -->
+				<executions>
+					<execution>
+						<id>exec-copyReleaseNotes</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${copyReleaseNotes}</executable>
+							<arguments>
+								<argument>${srcReleaseNotes}</argument>
+								<argument>${dstReleaseNotes}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>exec-copyUnitTestReports</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${copyReleaseNotes}</executable>
+							<arguments>
+								<argument>${srcUnitTestReports}</argument>
+								<argument>${dstUnitTestReports}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

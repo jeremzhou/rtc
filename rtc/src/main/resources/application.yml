@@ -1,0 +1,20 @@
+#spring boot properties
+#http://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#common-application-properties
+
+#spring cloud properties
+#http://cloud.spring.io/spring-cloud-static/Dalston.SR1/#_appendix_compendium_of_configuration_properties
+
+# IDENTITY (ContextIdApplicationContextInitializer)
+spring:
+  application:
+    name: rtc
+    
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  security:
+    # false security.
+    enabled: false
+
+logging:
+  level:
+    root: DEBUG # Log levels severity mapping. For instance, `logging.level.org.springframework=DEBUG`.
